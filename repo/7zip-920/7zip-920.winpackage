@@ -1,0 +1,1 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><winPackage><name es="7zip 9.20" /><installer file="7z920-x64.msi"><param value="/passive" /><param value="/norestart" /></installer></winPackage>

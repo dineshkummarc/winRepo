@@ -1,0 +1,1 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><winPackage><name es="Microsoft Office 2010" /><installer file="setup.exe"><param value="/adminfile winNew.msp" /></installer></winPackage>

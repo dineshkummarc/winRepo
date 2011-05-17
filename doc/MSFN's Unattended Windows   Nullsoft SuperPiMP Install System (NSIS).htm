@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+
+
+<title>MSFN's Unattended Windows : Nullsoft SuperPiMP Install System (NSIS)</title>
+
+
+
+<link rel="stylesheet" type="text/css" href="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/style.css">
+
+
+
+
+
+
+
+</head>
+
+
+
+<body><div id="itxtexclude"><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/searchbar_1297857114.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/relatedcontentlist_1287400603.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/relatedcontent_1297857148.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/advert.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/context_002.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/context.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/init.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/ga.js"></script><link rel="stylesheet" type="text/css" href="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/itxtcss_1302620257.css" id="itxtcss"><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/ui_1304979164.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/tmpl_1304979121.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/metrics_1299511498.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/itxt_1302793023.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/fx_1286533523.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/debug_1301668411.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/data_1302620257.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/core_1302620257.js"></script></div>
+
+
+
+<table class="pageblock" cellpadding="0" cellspacing="0">
+
+
+
+<tbody><tr><td colspan="2"><img src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/unattended-top.jpg" alt="Unattended XPCD" style="vertical-align: bottom;" height="137" width="900"></td></tr>
+
+
+
+<tr><td class="nav">
+
+
+
+    <script type="text/JavaScript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/milonic_src.js"></script><style>.milonic{width:1px;visibility:hidden;position:absolute}</style>
+
+
+
+    <script type="text/JavaScript">
+
+
+
+	  // <![CDATA[
+
+
+
+		if(ns4)_d.write("<scr"+"ipt language=JavaScript src=/global/menu/mmenuns4.js><\/scr"+"ipt>");		
+
+
+
+		else _d.write("<scr"+"ipt language=JavaScript src=/global/menu/mmenudom.js><\/scr"+"ipt>"); 
+
+
+
+	  // ]]>
+
+
+
+	  </script><script language="JavaScript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/mmenudom.js"></script><script>function $9(ap){return _f}</script>
+
+
+
+    <script type="text/JavaScript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/menu_data.js"></script>
+
+
+
+	<script type="text/javascript">
+
+
+
+	
+
+
+
+	with(milonic=new menuname("Main Menu")){
+style=XPMainStyle;
+top=10;
+left=10;
+alwaysvisible=1;
+orientation="vertical";
+margin=4;
+position="relative";
+aI("text= Home ;showmenu=Home;url=/unattended.xp/view/web/1/;image=/global/menu/icons/homepage_gap.gif;");
+aI("text= Beginning Users ;showmenu=Beginner;image=/global/menu/icons/tool_gap.gif;");
+aI("text= Intermediate Users ;showmenu=Intermediate;image=/global/menu/icons/drivers_gap.gif;");
+aI("text= Advanced Users ;showmenu=Advanced;image=/global/menu/icons/cosmet_gap.gif;");
+aI("text= Reference ;showmenu=Reference;image=/global/menu/icons/question_gap.gif;");
+aI("text= Forums ;url=http://www.msfn.org/board;image=/global/menu/icons/forum_gap.gif;");
+}
+
+/*What follows is the Home branch of the menu */
+
+/* Moved to Template File */
+
+/* What follows is for the Beginner branch of the menu */
+
+with(milonic=new menuname("Beginner")){
+style=XPMenuStyle;
+overflow="scroll";
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/2/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= Step 1 - Creating a Local Source;url=/unattended.xp/view/web/3/;image=/global/menu/icons/hdd.gif;");
+aI("text= Step 2 - Slipstreaming Latest Service Pack;url=/unattended.xp/view/web/6/;image=/global/menu/icons/software.gif;");
+aI("text= Step 3 - Updating Setup Source with Latest Hotfixes;showmenu=Hotfixes;url=;image=/global/menu/icons/windowsupdate.gif;");
+aI("text= Step 4 - Creating a Basic Unattended Setup;url=/unattended.xp/view/web/7/;image=/global/menu/icons/notepad.gif;separatorsize=1;");
+aI("text= Finalising and Testing the CD;url=/unattended.xp/view/web/8/;image=/global/menu/icons/cd.gif;");
+}
+
+with(milonic=new menuname("Hotfixes")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/26/;image=/global/menu/icons/homepage.gif;separatorsize=1;");
+aI("text= Getting the Hotfixes;url=/unattended.xp/view/web/5/;image=/global/menu/icons/ie.gif;");
+aI("text= Installing the Hotfixes;showmenu=Hotfixes_Install;url=;image=/global/menu/icons/windowsupdate.gif;");
+
+}
+
+with(milonic=new menuname("Hotfixes_Install")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/6/;image=/global/menu/icons/homepage.gif;separatorsize=1;");
+aI("text= Post-SP2 Hotfix Switch;url=/unattended.xp/view/web/23/;image=/global/menu/icons/hotfix.gif;");
+aI("text= SVCPACK.INF Method;url=/unattended.xp/view/web/24/;image=/global/menu/icons/ini.gif;");
+aI("text= nLite;url=/unattended.xp/view/web/25/;image=/global/menu/icons/nlite.gif;");
+
+}
+
+/* What follows is the Intermediate branch of the menu */
+
+with(milonic=new menuname("Intermediate")){
+style=XPMenuStyle;
+overflow="scroll";
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/28/;image=/global/menu/icons/information.gif;");
+aI("text= Methods of Install;showmenu=Methods;image=/global/menu/icons/notepad.gif;separatorsize=1;");
+aI("text= Device Drivers;showmenu=Drivers;image=/global/menu/icons/drivers.gif;");
+aI("text= Applications;showmenu=Apps;image=/global/menu/icons/software.gif;");
+aI("text= Adding Users;url=/unattended.xp/view/web/27/;image=/global/menu/icons/users.gif;");
+aI("text= Activation;url=/unattended.xp/view/web/29/;image=/global/menu/icons/windowsupdate.gif");
+aI("text= Regtweaks;showmenu=RegDB;image=/global/menu/icons/regedit.gif;;separatorsize=1;");
+aI("text= Finalising and Testing the CD;url=/unattended.xp/view/web/8/;image=/global/menu/icons/cd.gif;");
+}
+
+with(milonic=new menuname("Methods")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/32/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= Batch Scripting;url=/unattended.xp/view/web/30/;image=/global/menu/icons/batch.gif;");
+aI("text= RunOnceEX;url=/unattended.xp/view/web/31/;image=/global/menu/icons/tool.gif;");
+}
+
+with(milonic=new menuname("Drivers")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/33/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= Drivers via WINNT.SIF;url=/unattended.xp/view/web/34/;image=/global/menu/icons/drivers.gif;");
+aI("text= Drivers from CD;url=/unattended.xp/view/web/35/;image=/global/menu/icons/cd.gif;");
+aI("text= RAID/SATA Drivers;url=/unattended.xp/view/web/36/;image=/global/menu/icons/ini.gif;separatorsize=1;");
+aI("text= Bâshrat the Sneaky's DriverPacks;url=/unattended.xp/view/web/37/;image=/global/menu/icons/information.gif;");
+}
+
+with(milonic=new menuname("Apps")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/38/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= Application Database;showmenu=AppsDB;image=/global/menu/icons/question.gif;separatorsize=1;");
+aI("text= MS Office XP/2003;showmenu=Office;url=;image=/global/menu/icons/office.gif;separatorsize=1;");
+aI("text= Inno Setup;url=/unattended.xp/view/web/39/;image=/global/menu/icons/information.gif;");
+aI("text= Installshield;url=/unattended.xp/view/web/40/;image=/global/menu/icons/information.gif;");
+aI("text= NSIS;url=/unattended.xp/view/web/41/;image=/global/menu/icons/information.gif;");
+aI("text= Windows Installer (.msi);url=/unattended.xp/view/web/42/;image=/global/menu/icons/information.gif;");
+aI("text= Wise Installer;url=/unattended.xp/view/web/43/;image=/global/menu/icons/information.gif;");
+}
+
+with(milonic=new menuname("AppsDB")){
+style=XPMenuStyle;
+margin=4;
+
+aI("text= Application Database;url=/unattended.xp/page/list/switch/;image=/global/menu/icons/question.gif;");
+}
+
+with(milonic=new menuname("Office")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Office XP Index;url=/unattended.xp/view/web/47/;image=/global/menu/icons/homepage.gif");
+aI("text= Simple Installation;url=/unattended.xp/view/web/44/;image=/global/menu/icons/software.gif");
+aI("text= Advanced Installation;url=/unattended.xp/view/web/45/;image=/global/menu/icons/tool.gif;separatorsize=1;");
+aI("text= Office 2003 Index;url=/unattended.xp/view/web/46/;image=/global/menu/icons/homepage.gif");
+aI("text= Office 2003 Slipstreaming;url=/unattended.xp/view/web/48/;image=/global/menu/icons/cd.gif;");
+aI("text= Simple Installation;url=/unattended.xp/view/web/49/;image=/global/menu/icons/software.gif");
+aI("text= Advanced Installation;url=/unattended.xp/view/web/50/;image=/global/menu/icons/tool.gif;");
+
+}
+
+with(milonic=new menuname("RegDB")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/17/;image=/global/menu/icons/information.gif;separatorsize=1;");
+
+aI("text= Registry Tweak Database;url=/unattended.xp/page/list/registry/;image=/global/menu/icons/question.gif;");
+}
+
+/* What follows is the Advanced banch of the menu */
+
+with(milonic=new menuname("Advanced")){
+style=XPMenuStyle;
+overflow="scroll";
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/55/;image=/global/menu/icons/information.gif;");
+aI("text= Advanced Methods of Install;showmenu=Methods_Adv;image=/global/menu/icons/notepad.gif;separatorsize=1;");
+aI("text= Using Modified System Files;showmenu=Mod_System;image=/global/menu/icons/dll.gif;");
+aI("text= Cosmetics;showmenu=Cosmetics;image=/global/menu/icons/cosmet.gif;");
+aI("text= Slimming down your CD/DVD;url=/unattended.xp/view/web/57/;image=/global/menu/icons/space.gif;");
+aI("text= Creating a Multiboot CD/DVD;url=/unattended.xp/view/web/56/;image=/global/menu/icons/cd.gif;");
+aI("text= Member Created Applications;url=/unattended.xp/view/web/58/;image=/global/menu/icons/software.gif;separatorsize=1;");
+aI("text= Finalising and Testing the CD;url=/unattended.xp/view/web/8/;image=/global/menu/icons/cd.gif;");
+}
+
+with(milonic=new menuname("Methods_Adv")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/63/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= RunOnceEX from CD;url=/unattended.xp/view/web/59/;image=/global/menu/icons/cd.gif;");
+aI("text= Windows Post-Installer;url=/unattended.xp/view/web/62/;image=/global/menu/icons/software.gif;");
+aI("text= Windows Installation Helper Utility;url=/unattended.xp/view/web/61/;image=/global/menu/icons/wihu.gif;");
+aI("text= XPlode;url=/unattended.xp/view/web/60/;image=/global/menu/icons/xplode.gif;");
+}
+
+with(milonic=new menuname("Mod_System")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/68/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= Unsigned Visual Styles;url=/unattended.xp/view/web/67/;image=/global/menu/icons/cd.gif;");
+aI("text= More Concurrent Connections;url=/unattended.xp/view/web/65/;image=/global/menu/icons/software.gif;");
+aI("text= Windows File Protection;url=/unattended.xp/view/web/66/;image=/global/menu/icons/wihu.gif;");
+aI("text= Other Modified files;url=/unattended.xp/view/web/64/;image=/global/menu/icons/tool.gif;");
+}
+
+with(milonic=new menuname("Cosmetics")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/79/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= Setup Billboard;showmenu=Billboard;image=/global/menu/icons/cd.gif;");
+aI("text= Boot Screen;url=/unattended.xp/view/web/51/;image=/global/menu/icons/software.gif;");
+aI("text= Themes;url=/unattended.xp/view/web/76/;image=/global/menu/icons/wihu.gif;");
+aI("text= Logon Screens;url=/unattended.xp/view/web/78/;image=/global/menu/icons/tool.gif;");
+aI("text= Adding custom OEM Info;url=/unattended.xp/view/web/77/;image=/global/menu/icons/tool.gif;");
+}
+
+with(milonic=new menuname("Billboard")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/75/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= New Style Setup Billboards;showmenu=New_Billboard;image=/global/menu/icons/cd.gif;");
+aI("text= Classic Style Setup Billboards;url=/unattended.xp/view/web/74/;image=/global/menu/icons/software.gif;");
+}
+
+with(milonic=new menuname("New_Billboard")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/73/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= Background Image;url=/unattended.xp/view/web/71/;image=/global/menu/icons/cd.gif;");
+aI("text= Other Images to Change;url=/unattended.xp/view/web/72/;image=/global/menu/icons/software.gif;");
+aI("text= Text;url=/unattended.xp/view/web/70/;image=/global/menu/icons/software.gif;");
+aI("text= Colors;url=/unattended.xp/view/web/69/;image=/global/menu/icons/software.gif;");
+}
+
+/* What follows is the reference branch of the menu */
+with(milonic=new menuname("Reference")){
+style=XPMenuStyle;
+margin=4;
+aI("text= FAQ;url=/unattended.xp/page/list/faq/;image=/global/menu/icons/question.gif;separatorsize=1;");
+aI("text= Timeline;url=/unattended.xp/view/web/13/;image=/global/menu/icons/timeline.gif");
+aI("text= winnt.sif Reference;url=/unattended.xp/view/web/19/;image=/global/menu/icons/information.gif;");
+aI("text= Overview of the $OEM$ Folders;url=/unattended.xp/view/web/18/;image=/global/menu/icons/folder.gif");
+aI("text= CMDLINES.TXT Explained;url=/unattended.xp/view/web/14/;image=/global/menu/icons/question.gif;");
+aI("text= [GuiRunonce];url=/unattended.xp/view/web/81/;image=/global/menu/icons/question.gif;separatorsize=1;");
+aI("text= Crashcourse in Switches;url=/unattended.xp/view/web/21/;image=/global/menu/icons/information.gif;");
+aI("text= Using CDIMAGE GUI;url=/unattended.xp/view/web/15/;image=/global/menu/icons/cd.gif;");
+aI("text= Virtual Machine Tips;url=/unattended.xp/view/web/20/;image=/global/menu/icons/virtual.gif;separatorsize=1;");
+aI("text= Compressed Files;url=/unattended.xp/view/web/16/;image=/global/menu/icons/information.gif");
+aI("text= Localization: MUI and Regional Options;url=/unattended.xp/view/web/82/;image=/global/menu/icons/dll.gif;");
+aI("text= Examples;url=/unattended.xp/view/web/12/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= Member Sites;url=/unattended.xp/view/web/11/;image=/global/menu/icons/favourites.gif;");
+aI("text= Downloads;url=/unattended.xp/view/web/10/;image=/global/menu/icons/software.gif;separatorsize=1;");
+aI("text= Credits/Copyright;url=/unattended.xp/view/web/9/;image=/global/menu/icons/information.gif;");
+}
+
+//drawMenus();
+
+
+
+
+	
+
+
+
+	/*What follows is the site-specific stuff of the menu */
+
+
+
+	with(milonic=new menuname("Home")){
+
+
+
+	style=XPMenuStyle;
+
+
+
+	overflow="scroll";
+
+
+
+	margin=4;
+
+
+
+	aI("text= Changelog;url=/unattended.xp/changelog/;image=/global/menu/icons/notepad.gif;");
+
+
+
+	aI("text= Sitemap;url=/unattended.xp/sitemap/;image=/global/menu/icons/tool.gif;separatorsize=1;");
+
+
+
+	aI("text= Login;url=/unattended.xp/login/;image=/global/menu/icons/tool.gif;separatorsize=1;");
+
+
+
+	}
+
+
+
+	// drawMenus();
+
+
+
+	</script>
+ <script type="text/JavaScript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/preloadmenuimages.js"></script>
+
+	<script type="text/javascript">
+
+	drawMenus();
+	</script><div class="root_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu0" style="padding: 4px; border: 0px solid rgb(225, 225, 225); z-index: 999; visibility: visible; width: 157px;"><table class="milonictable" style="padding: 0px;" id="tbl0" border="0" cellpadding="0" cellspacing="0"><tbody><tr id="pTR0"><td id="el0" onmouseover="h$(0)" class="root_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl0" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td0"><td valign="middle"><img onload="_iniIF(0)" style="display: block;" id="img0" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/homepage_gap.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(0)" href="http://unattended.msfn.org/unattended.xp/view/web/1/" class="root_menu_off" id="lnk0" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;"> Home </a></td></tr></tbody></table></td></tr><tr><td style="padding: 0px;" id="sep0" align="center"><div style=";background:#E1E1E1;overflow:hidden;width:100%;;padding:0px;height:4px;font-size:1px;"></div></td></tr><tr id="pTR1"><td id="el1" onmouseover="h$(1)" class="root_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl1" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td1"><td valign="middle"><img onload="_iniIF(0)" style="display: block;" id="img1" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/tool_gap.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><div onclick="$K(1)" name="mM1" onfocus="_iF0C(1)" href="undefined" class="root_menu_off" id="lnk1" style="border:none;;background:transparent;display:block;   ">&nbsp;Beginning Users&nbsp;</div></td></tr></tbody></table></td></tr><tr><td style="padding: 0px;" id="sep1" align="center"><div style=";background:#E1E1E1;overflow:hidden;width:100%;;padding:0px;height:4px;font-size:1px;"></div></td></tr><tr id="pTR2"><td id="el2" onmouseover="h$(2)" class="root_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl2" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td2"><td valign="middle"><img onload="_iniIF(0)" style="display: block;" id="img2" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/drivers_gap.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><div onclick="$K(2)" name="mM1" onfocus="_iF0C(2)" href="undefined" class="root_menu_off" id="lnk2" style="border:none;;background:transparent;display:block;   ">&nbsp;Intermediate Users&nbsp;</div></td></tr></tbody></table></td></tr><tr><td style="padding: 0px;" id="sep2" align="center"><div style=";background:#E1E1E1;overflow:hidden;width:100%;;padding:0px;height:4px;font-size:1px;"></div></td></tr><tr id="pTR3"><td id="el3" onmouseover="h$(3)" class="root_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl3" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td3"><td valign="middle"><img onload="_iniIF(0)" style="display: block;" id="img3" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/cosmet_gap.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><div onclick="$K(3)" name="mM1" onfocus="_iF0C(3)" href="undefined" class="root_menu_off" id="lnk3" style="border:none;;background:transparent;display:block;   ">&nbsp;Advanced Users&nbsp;</div></td></tr></tbody></table></td></tr><tr><td style="padding: 0px;" id="sep3" align="center"><div style=";background:#E1E1E1;overflow:hidden;width:100%;;padding:0px;height:4px;font-size:1px;"></div></td></tr><tr id="pTR4"><td id="el4" onmouseover="h$(4)" class="root_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl4" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td4"><td valign="middle"><img onload="_iniIF(0)" style="display: block;" id="img4" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/question_gap.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><div onclick="$K(4)" name="mM1" onfocus="_iF0C(4)" href="undefined" class="root_menu_off" id="lnk4" style="border:none;;background:transparent;display:block;   ">&nbsp;Reference&nbsp;</div></td></tr></tbody></table></td></tr><tr><td style="padding: 0px;" id="sep4" align="center"><div style=";background:#E1E1E1;overflow:hidden;width:100%;;padding:0px;height:4px;font-size:1px;"></div></td></tr><tr id="pTR5"><td id="el5" onmouseover="h$(5)" class="root_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl5" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td5"><td valign="middle"><img onload="_iniIF(0)" style="display: block;" id="img5" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/forum_gap.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(5)" href="http://www.msfn.org/board" class="root_menu_off" id="lnk5" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Forums&nbsp;</a></td></tr></tbody></table></td></tr></tbody></table> <a name="mM1" id="mmlink0" href="#" onclick="return $K(this._itemRef)" onmouseover="_mot=$P(_mot);return $L(this._itemRef)" style="line-height: normal; background: none repeat scroll 0% 0% transparent; text-decoration: none; height: 1px; width: 1px; overflow: hidden; position: absolute;"></a></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu1" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu2" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu3" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu4" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu5" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu6" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu7" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu8" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu9" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu10" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu11" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu12" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu13" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu14" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu15" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu16" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu17" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu18" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div>
+	<br>
+	<b>Make a donation</b>
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+<input name="cmd" value="_s-xclick" type="hidden">
+
+<input src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/x-click-but04.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!" border="0" type="image">
+
+<img alt="" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/pixel.gif" height="1" border="0" width="1">
+
+<input name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+
+" type="hidden">
+
+</form>
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-2666250944335766";
+/* Unattended Sidebar */
+google_ad_slot = "8184585648";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px"><ins id="aswift_0_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px"><iframe allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){i+='.call';setTimeout(h,0)}else if(h.match){i+='.nav';w.location.replace(h)}s.log&amp;&amp;s.log.push(i)}" vspace="0" id="aswift_0" name="aswift_0" style="left: 0pt; position: absolute; top: 0pt;" frameborder="0" height="600" scrolling="no" width="160"></iframe></ins></ins>
+
+
+
+
+
+<br><br>
+
+
+
+
+
+
+
+
+
+<div style="height:30px;">&nbsp;</div>  
+
+
+
+	<a href="http://validator.w3.org/check?uri=referer"><img style="border: 0pt none; width: 88px; height: 31px;" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/valid-xhtml10.png" alt="Valid XHTML 1.0 Transitional"></a>
+
+
+
+	<a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border: 0pt none; width: 88px; height: 31px;" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/vcss.png" alt="Valid CSS!"></a>
+
+
+
+	<div style="height:30px;">&nbsp;</div>
+
+
+
+
+
+    </td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <td class="main_box">&nbsp;&nbsp;&nbsp;<div align="center">
+  
+  <script type="text/javascript"><!--
+google_ad_client = "pub-2666250944335766";
+/* Unattended Top */
+google_ad_slot = "1444063037";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><iframe allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){i+='.call';setTimeout(h,0)}else if(h.match){i+='.nav';w.location.replace(h)}s.log&amp;&amp;s.log.push(i)}" vspace="0" id="aswift_1" name="aswift_1" style="left: 0pt; position: absolute; top: 0pt;" frameborder="0" height="90" scrolling="no" width="728"></iframe></ins></ins>
+
+<br><br>
+
+</div>
+ 
+
+
+  	
+
+
+
+    <div class="text"> <div class="title"> Nullsoft SuperPiMP Install System (NSIS) </div>
+<div class="title_subtext"> Submitted by Alanoll </div>
+<br>
+Applications packaged with NSIS supports the /S switch for a silent installation (the 'S' is case-sensitive)<br>
+<br>
+<div class="code"><pre>Setup.exe /S</pre></div><br>
+You can also use the /D switch to specify a destination drive/directory to install the files into:<br>
+<br>
+<div class="code"><pre>Setup.exe /S /D=E:\Software\CDex</pre></div><br>
+If you do, prefer putting /S before /D="path" otherwise installation may not be silent.<br>
+<a style="font-weight: normal; font-size: 100%; text-decoration: none; border-bottom: 0.2em dotted rgb(43, 101, 176); padding-bottom: 0px; color: rgb(43, 101, 176); background-color: transparent;" class="itxtrst itxtrsta itxthook" href="#" id="itxthook0" rel="nofollow"><nobr style="color: rgb(43, 101, 176);" id="itxthook0w0nobr" class="itxtrst itxtrstnobr itxthooknobr"><span id="itxthook0w0" class="itxtrst itxtrstspan itxthookspan" style="background:transparent; font-size:inherit; font-color:inherit;font-weight:inherit;">Software</span><img class="itxtrst itxtrstimg itxthookicon" id="itxthook0icon" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/mag-glass_10x10.gif" style=""></nobr></a>
+ such as Winamp and CDex show a confirmation that install was successful
+ at the end (CDex), or an "end-of-install" screen where you set file 
+associations and settings (Winamp). I haven't found a way to bypass this
+ yet, but it shouldn't affect the rest of the batch commands in any way.<br>
+<br>
+<div class="section">» How do I find out if a setup package is made by NSIS?</div><br>
+Many NSIS packaged installers show the familiar small window at the center of your screen, such as Winamp and CDex:<br>
+<br>
+<a href="http://unattended.msfn.org/unattended.xp/image/view/78/" target="_blank"><img alt="Unattended XPCD" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/a.gif" class="img_text"></a>
+<hr>
+<div style="text-align: right; font-size: 10px; width:100%;"><div class="print_link"><a href="http://unattended.msfn.org/unattended.xp/print/web/41/"><img src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/print_friend.gif" alt="Printer Friendly Version"><span style="vertical-align:top;">Printer Friendly Version</span></a></div><div style="text-align:right;"> Last updated 2006-08-10 04:25:23 by Camarade_Tux &nbsp;[<a href="http://unattended.msfn.org/unattended.xp/page/edit/web/41/">Edit</a>] </div>
+<form method="post" name="move_form" action="/unattended.xp/page/move/">
+	<input name="old_table" value="web" type="hidden">
+	<input name="id" value="41" type="hidden">
+	<select class="form_boxes" name="new_table">
+		<option selected="selected" value="registry">Move article to Registry Tweak section.</option><option value="switch">Move article to Application Switch section.</option><option value="faq">Move article to FAQ section.</option>
+	</select>
+	<input name="Submit" value="Go" class="form_button" type="submit">
+</form>
+</div> </div>
+
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-2666250944335766";
+/* Unattended Bottom */
+google_ad_slot = "5688027780";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><ins id="aswift_2_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><iframe allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){i+='.call';setTimeout(h,0)}else if(h.match){i+='.nav';w.location.replace(h)}s.log&amp;&amp;s.log.push(i)}" vspace="0" id="aswift_2" name="aswift_2" style="left: 0pt; position: absolute; top: 0pt;" frameborder="0" height="90" scrolling="no" width="728"></iframe></ins></ins>
+<div align="center">
+<div class="text">
+All trademarks mentioned on this page are the property of their respective owners 
+<br>
+MSFN is not affiliated with <a style="font-weight: normal; font-size: 100%; text-decoration: none; border-bottom: 0.2em dotted rgb(43, 101, 176); padding-bottom: 0px; color: rgb(43, 101, 176); background-color: transparent;" class="itxtrst itxtrsta itxthook" href="#" id="itxthook1" rel="nofollow"><nobr style="color: rgb(43, 101, 176);" id="itxthook1w0nobr" class="itxtrst itxtrstnobr itxthooknobr"><span id="itxthook1w0" class="itxtrst itxtrstspan itxthookspan" style="background:transparent; font-size:inherit; font-color:inherit;font-weight:inherit;">Microsoft</span><img class="itxtrst itxtrstimg itxthookicon" id="itxthook1icon" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/mag-glass_10x10.gif" style=""></nobr></a> 
+<br>
+Copyright © 2001 - 2011 <a href="http://www.msfn.org/">msfn.org</a>
+<br>
+<a href="http://unattended.msfn.org/privacypolicy.php" target="_blank">Privacy Policy</a>
+
+
+</div>
+
+
+
+</div>
+
+
+
+  </td></tr>
+
+
+
+</tbody></table>
+
+
+
+
+
+
+
+<!-- start Vibrant Media IntelliTXT script section -->
+
+<script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/front.js"></script>
+
+<!-- end Vibrant Media IntelliTXT script section -->
+
+
+
+
+
+
+
+
+
+<div style="display: none; visibility: hidden;" id="itxttt" class="itxtrst itxtrstdiv"><div id="itxtshadow" class="itxtrst itxtrstdiv"><div class="itxtrst itxtrstdiv itxtshdw itxttl"><div class="itxtrst itxtrstdiv" style="width: 765px; height: 641px;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/lg_shadow_sprite.png" height="641" width="765"></div></div><div class="itxtrst itxtrstdiv itxtshdw itxtbl"><div class="itxtrst itxtrstdiv" style="width: 765px; height: 641px;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/lg_shadow_sprite.png" height="641" width="765"></div></div><div class="itxtrst itxtrstdiv itxtshdw itxttr"><div class="itxtrst itxtrstdiv" style="width: 765px; height: 641px;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/lg_shadow_sprite.png" height="641" width="765"></div></div><div class="itxtrst itxtrstdiv itxtshdw itxtbr"><div class="itxtrst itxtrstdiv" style="width: 765px; height: 641px;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/lg_shadow_sprite.png" height="641" width="765"></div></div><div class="itxtrst itxtrstdiv itxtshdw itxttm"><div class="itxtrst itxtrstdiv" style="width: 765px; height: 641px;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/lg_shadow_sprite.png" height="641" width="765"></div></div><div class="itxtrst itxtrstdiv itxtshdw itxtbm"><div class="itxtrst itxtrstdiv" style="width: 765px; height: 641px;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/lg_shadow_sprite.png" height="641" width="765"></div></div><div class="itxtrst itxtrstdiv itxtshdw itxtfill"><div class="itxtrst itxtrstdiv" style="width: 765px; height: 641px;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/lg_shadow_sprite.png" height="641" width="765"></div></div><div class="itxtrst itxtrstdiv itxtshdw itxttail"><div class="itxtrst itxtrstdiv" style="width: 765px; height: 641px;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/lg_shadow_sprite.png" height="641" width="765"></div></div></div><div id="itxtchrome" class="itxtrst itxtrstdiv"><div style="background-color: rgb(251, 251, 251);" class="itxtrst itxtrstdiv" backgroundcolor="#fbfbfb" id="itxtcontentbg"></div><div style="position: absolute;" id="itxtslideout" class="itxtrst itxtrstdiv"><div style="width: 100%; height: 100%; background-color: rgb(84, 84, 84); opacity: 0.85; border-radius: 7px 7px 7px 7px;" class="itxtrst itxtrstdiv"></div><div class="itxtrst itxtrstdiv" style="position:absolute;left:0;top:0;width:100%;height:21px;line-height:21px;color:white;font-size:11px;font-weight:bold;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/close_off.gif" style="vertical-align: middle; float: right; margin-right: 4px; margin-top: 4px;"><span class="itxtrst itxtrstspan" style="margin-left: 20px;line-height:21px;">${sspl}</span></div><div class="itxtrst itxtrstdiv" style="overflow:hidden;position:absolute;left:20px;top:21px;width:100%;height:NaNpx;width:NaNpx;"></div></div><div id="itxtheader" class="itxtrst itxtrstdiv"><div class="itxtrst itxtrstdiv itxttrc"><a class="itxtrst itxtrsta" target="_blank"><img class="itxtrst itxtrstimg itxtvmlogo" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/vm_logo2009.gif"></a><a class="itxtrst itxtrsta" target="_blank"><img class="itxtrst itxtrstimg itxtwhat" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/what_off.gif" alt="${swti}" title="${swti}"></a><img class="itxtrst itxtrstimg itxtclose" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/close_off_002.gif" alt="${scls}" title="${scls}"></div><div class="itxtrst itxtrstdiv itxttlc"><div class="itxtrst itxtrstdiv itxtadv">${SSPL}</div></div><div class="itxtrst itxtrstdiv itxtcrnhldr"><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #FDFEFF; margin-left: 6px; margin-right:6px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #F6F6F6; margin-left: 4px; margin-right:4px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #F4F4F4; margin-left: 2px; margin-right:2px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #F1F0F0; margin-left: 2px; margin-right:2px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #EEEDEE; margin-left: 1px; margin-right:1px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #ECECEC; margin-left: 1px; margin-right:1px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #EBEBEA; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #EBEBEB; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #EBEBEB; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #E7E7E6; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #CFCFCF; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #D1D1D2; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #D3D3D3; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #D8D7D5; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #DDDDD9; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #E1E0D9; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #E5E4DB; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #E9E9DC; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #EBEBDC; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #EDECDD; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #E4E4E4; margin-left: 0px; margin-right:0px;"></div></div></div><div id="itxtfooter" class="itxtrst itxtrstdiv"><div class="itxtrst itxtrstdiv itxtftr" style="background-color: #; margin-left: 1px; margin-right:1px"></div><div class="itxtrst itxtrstdiv itxtftr" style="background-color: f; margin-left: 1px; margin-right:1px"></div><div class="itxtrst itxtrstdiv itxtftr" style="background-color: b; margin-left: 2px; margin-right:2px"></div><div class="itxtrst itxtrstdiv itxtftr" style="background-color: f; margin-left: 2px; margin-right:2px"></div><div class="itxtrst itxtrstdiv itxtftr" style="background-color: b; margin-left: 4px; margin-right:4px"></div><div class="itxtrst itxtrstdiv itxtftr" style="background-color: f; margin-left: 6px; margin-right:6px"></div></div><div style="width: 46px; height: 22px;" id="itxttail" class="itxtrst itxtrstdiv"><div class="itxtrst itxtrstdiv" style="background-color: #; margin-left: 10px; margin-right:2px"></div><div class="itxtrst itxtrstdiv" style="background-color: f; margin-left: 10px; margin-right:4px"></div><div class="itxtrst itxtrstdiv" style="background-color: b; margin-left: 9px; margin-right:6px"></div><div class="itxtrst itxtrstdiv" style="background-color: f; margin-left: 9px; margin-right:8px"></div><div class="itxtrst itxtrstdiv" style="background-color: b; margin-left: 8px; margin-right:10px"></div><div class="itxtrst itxtrstdiv" style="background-color: f; margin-left: 8px; margin-right:12px"></div><div class="itxtrst itxtrstdiv" style="background-color: b; margin-left: 7px; margin-right:14px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 7px; margin-right:16px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 6px; margin-right:18px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 6px; margin-right:20px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 5px; margin-right:22px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 5px; margin-right:24px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 4px; margin-right:26px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 4px; margin-right:28px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 3px; margin-right:30px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 3px; margin-right:32px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 2px; margin-right:34px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 2px; margin-right:36px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 1px; margin-right:38px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 1px; margin-right:40px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 0px; margin-right:42px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 0px; margin-right:44px"></div></div><div id="itxtdrawerfooter" class="itxtrst itxtrstdiv"></div><div style="overflow: hidden; width: 300px; height: 100px;" id="itxtcontent" class="itxtrst itxtrstdiv"><div class="itxtrst itxtrstdiv" id="itxtcontentLdg" style="position: absolute; display: none; width: 300px; height: 100px;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Nullsoft%20SuperPiMP%20Install%20System%20%28NSIS%29_files/loading.gif" id="itxtcontentLdgImg" style="position: absolute; left: 50%; top: 50%; margin-left: 0px; margin-top: 0px;"></div></div></div></div></body></html>

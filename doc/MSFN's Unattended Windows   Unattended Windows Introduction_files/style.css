@@ -1,0 +1,528 @@
+/* CSS Document */
+
+A:link {
+	color: #FF6600; 
+}
+
+A:visited {
+	color: #FF9933; 
+}
+
+A:active {
+	color:#FFCC66;
+}
+
+A:hover {
+	color:#FFCC66;
+}
+
+p {
+	font-family: Verdana, Tahoma, Geneva, Arial, Helvetica, sans-serif;
+	color: #000000; 
+	font-size: 11px;
+	text-align: justify;
+}
+
+
+td {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+ 	color: #000000; 
+	font-size: 11px;
+	text-align: justify;
+	margin: 0px;
+	/*vertical-align: top;*/
+}
+	
+tr {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+ 	color: #000000; 
+	font-size: 11px;
+	text-align: justify;
+	margin: 0px;
+	vertical-align: top;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+img {
+	border: 0px none;
+}
+
+.print_link {
+	text-align:left;
+	position:relative;
+	left: 0px;
+	float: left;
+	vertical-align: top; 
+}
+
+.main_box {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+ 	color: #000000; 
+	font-size: 12px;
+	text-align: justify;
+	border-bottom:1px solid #999;
+	background-color: #FFFFFF;
+	width: 733px;
+	margin: 0px;
+	border-left: 1px solid #666666;
+	background-image: url(/global/rightcurve.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+	vertical-align: top;
+	position: relative;
+}
+
+.img_text {
+	border: 1px;
+	border-color: #666666;
+	border-style: solid;
+}
+	
+.text {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+ 	color: #000000; 
+	font-size: 11px;
+	/*text-align: justify; */
+	margin:15px 20px 20px 20px;
+	}
+
+.reason_back {
+	background-color: #CCCCCC; 
+	border: 1px; 
+	border-color:#999999; 
+	border-style:solid; 
+	padding:5px;
+	font-size: 15px;
+	font-weight:bold;
+}
+.reason_inside {
+	background-color: #FFFFFF; 
+	border: 1px; 
+	border-color:#999999; 
+	border-style:solid; 
+	padding: 5px;
+	font-size: 11px;
+	margin-left: 20px;
+}
+
+.float_ad {
+	position: relative;
+	float: right;
+	/*width: 125px;
+	height: 125px;*/
+	padding: 5px;
+	margin-right: 5px;
+	margin-top: 20px;
+}
+.pageblock {
+	width: 900px;
+	padding: 0px;
+	margin: 0px;
+}
+.nav {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+ 	color: #000000; 
+	font-size: 12px;
+	text-align: center;
+	border-bottom:1px solid #999;
+	background-color: #E1E1E1;
+	width: 166px;
+	margin: 0px;
+	vertical-align: top;
+}
+
+table {
+	border-top: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	color: #000000; 
+	font-size: 12px;
+	text-align: justify; 
+	background-color: #07427D; 
+	margin: 0;
+	padding: 0; 
+}
+
+.textarea_post { 
+   font-family: Verdana, Tahoma, Geneva, Arial, Helvetica, sans-serif; 
+   font-size: 11px; 
+   color:#000000; 
+   background-color:#E1E1E1; 
+   border:1px solid #999999; 
+   padding: 4px; 
+   margin: 3px;
+   /*overflow: scroll; */
+   white-space: pre;
+   overflow: auto;
+}
+
+.section {
+	font-family: Verdana, Tahoma, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000000;
+	line-height: 16px;
+	font-weight:bold;
+	background-image: url( /global/divider.jpg );
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	padding:3px;
+   }
+
+.title {
+   font-family: Verdana, Tahoma, Geneva, Arial, Helvetica, sans-serif;
+   font-size: 24px;
+   color: #003366;
+   font-weight: bold;
+   text-align: left;
+  	}
+
+.title_subtext {
+   font-family: Verdana, Tahoma, Geneva, Arial, Helvetica, sans-serif;
+   font-size: 10px;
+   color: #003366;
+   font-weight: normal ;
+   text-align: left;
+  	}
+
+.code {
+	font-family: "Lucida Console", "Courier New", Courier, monospace;
+	border: 1px solid #999999; 
+	background-color: #E1E1E1;
+	padding: 4px; 
+	margin: 3px;
+	width: 85%;
+	overflow: auto;
+	/*white-space:pre;*/
+}
+
+
+
+
+/* CSS Styles for the FAQ */
+.FAQTitle {
+	font-family: Verdana, Tahoma, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+	line-height: 16px;
+	font-weight:bold;
+	display: block;
+	cursor: pointer;
+   }
+   
+.FAQBody {
+	font-family: Verdana, Tahoma, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	line-height: 16px;
+	background-image: url( /global/divider.jpg );
+	background-repeat: no-repeat;
+	background-position: top;
+	padding:3px;
+	display:none;
+   }
+ 
+/* CSS Styles for the Resource Tables found in Cosmetic Seection */
+.resourcebox_table {
+   background-color: #FFFFFF; border:1px solid #666666;
+   font-family: Verdana, Tahoma, Geneva, Arial, Helvetica, sans-serif;
+   font-size: 10px;
+   font-weight: normal;
+   text-align: center;
+   vertical-align: middle;
+}
+
+
+.title_table {
+   background-color: #E1E1E1; border:1px solid #666666;
+   font-family: Verdana, Tahoma, Geneva, Arial, Helvetica, sans-serif;
+   font-size: 16px;
+   font-weight: bold;
+   text-align: center;
+}
+
+
+/* Form Styles */
+
+.form_button {
+	border-color: #999999;
+	border-style: solid;
+	border-width: 1px;
+	padding: 2px;
+	font-size: 11px;
+	background-color: #C9C9C9;
+	vertical-align: middle;  
+	color: #000000;
+	font-family: Verdana, Helvetica, Sans-Serif;
+}
+
+.form_border {
+	background-color: #FFFFFF; 
+	border: 1px; 
+	border-color: #999999; 
+	border-style: solid; 
+	padding: 5px;
+
+}
+
+.form_back {
+	background-color: #CCCCCC; 
+	border: 1px; 
+	border-color:#999999; 
+	border-style:solid; 
+	padding:5px;
+}
+
+.form_palette_div {
+	padding: 0px; 
+	display: block;
+	margin: 0px;
+	position: relative;
+	width: 650px;
+}
+
+.form_palette_iframe {
+	display: none;
+	visibility: hidden;
+	position: absolute;
+	width:154px;
+	height: 104px;
+}
+
+.form_textarea {
+	font-family: Verdana, Tahoma, Geneva, Arial, Helvetica, sans-serif; 
+   	font-size: 11px; 
+   	color:#000000;
+   	padding: 4px;
+	border: 1px;
+	border-color: #999999;
+	border-style:solid;
+	background-color:#FFFFFF;
+	margin: 0px;
+	width: 659px;
+	
+}
+
+.form_table_td_left {
+	width:1%;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.form_table_td_center {
+	width:98%;
+}
+
+.form_table_td_right {
+	width:1%;
+	text-align: right;
+	white-space: nowrap;
+}
+
+.form_buttonbar_top { 
+	border-right: #999999 1px solid;
+	border-top: #999999 1px solid; 
+	border-left: #999999 1px solid;
+	border-bottom: #999999 0px solid;
+	padding: 2px;
+	background-image: url(/global/post_form/rte_tile.gif);	
+	letter-spacing: 0px; 
+	height: 28px;
+}
+.form_buttonbar_bottom {
+	border-right: #999999 1px solid;
+	border-top: #999999 1px solid; 
+	border-left: #999999 1px solid;
+	border-bottom: #999999 1px solid;
+	padding: 2px;
+	background-image: url(/global/post_form/rte_tile.gif);	
+	letter-spacing: 0px; 
+	height: 28px;
+}
+
+.form_image {
+	padding: 1px;
+	cursor: pointer; 
+}
+
+.form_image_raised {
+	padding: 0px;
+	border: 1px;
+	border-style:outset;
+	cursor: pointer;
+}
+.form_vert_sep {
+	margin: 0px 4px; 
+	padding-top:5px;
+}
+.form_boxes {
+	font-size: 10px; 
+	margin: 2px; 
+	vertical-align: middle; 
+	font-family: Verdana, Helvetica, Sans-Serif;
+}
+
+/* CSS for AJAX Prompts */
+
+.ajax_prompt{
+	background: #E1E1E1;
+	border: 1px solid #999999;
+	margin: 0 auto 0 auto;
+	text-align: left;
+	width: 500px;
+}
+
+.ajax_title{
+	background: #CCCCCC;
+	border-bottom: 1px solid #999999;
+	color: #000000;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0;
+	padding: 5px;
+}
+
+.ajax_text{
+	margin: 0;
+	padding: 5px;
+	font-size: 12px;
+	white-space:normal;
+}
+
+.ajax_footer{
+	background: #CCCCCC;
+	border-top: 1px solid #999999;
+	padding: 2px;
+	text-align: center;
+}
+
+.ajax_div {
+	display: block;
+	margin: 0 auto 0 auto;
+	position: absolute;
+	top: 20%;
+	left: 0;
+	height: 100px;
+}
+
+/* CSS for the Login Errors */
+
+.login_error {
+	background: #F2DDDD;
+	border: 1px solid #992A2A;
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+}
+
+
+.login_error_title {
+	background: #E3C0C0;
+	border: 1px solid #992A2A;
+	border-left: 0;
+	border-right: 0;
+	color: #992A2A; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.login_error_text {
+	background: transparent;
+	border: 0;
+	color: #992A2A;
+	margin: 0;
+	padding: 8px;
+}
+
+/* CSS for the DHTML Menu */
+.root_menu_on {
+	color: #000000;
+	background-color:#C1D2EE;
+	border-color: #999999;
+	border-width: 1px;
+	border-style: solid;
+	padding: 3px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight:normal;
+	font-size: 12px;
+	
+}
+
+A:link.root_menu_on {color: #000000; font-style:normal; text-decoration:none;}
+
+A:visited.root_menu_on {color: #000000; font-style:normal; text-decoration:none;}
+
+A:active.root_menu_on {color:#000000; font-style:normal; text-decoration:none;}
+
+A:hover.root_menu_on {color:#000000; font-style:normal; text-decoration:none;}
+
+.root_menu_off {
+	color: #000000;
+	background-color: #E1E1E1;
+	border-color: #999999;
+	border-width: 1px;
+	border-style: solid;
+	padding: 3px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight:normal;
+	font-size: 12px;
+}
+
+A:link.root_menu_off {color: #000000; font-style:normal; text-decoration:none;}
+
+A:visited.root_menu_off {color: #000000; font-style:normal; text-decoration:none;}
+
+A:active.root_menu_off {color:#000000; font-style:normal; text-decoration:none;}
+
+A:hover.root_menu_off {color:#000000; font-style:normal; text-decoration:none;}
+
+.sub_menu_off {
+	color: #000000;
+	/* border-color: transparent;
+	border-width: 0px;
+	border-style: solid; */
+	padding: 3px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight:normal;
+	font-size: 12px;
+}
+
+A:link.sub_menu_off {color: #000000; font-style:normal; text-decoration:none;}
+
+A:visited.sub_menu_off {color: #000000; font-style:normal; text-decoration:none;}
+
+A:active.sub_menu_off {color:#000000; font-style:normal; text-decoration:none;}
+
+A:hover.sub_menu_off {color:#000000; font-style:normal; text-decoration:none;}
+
+.sub_menu_on {
+	color: #000000;
+	background-color:#C1D2EE;
+	/* border-color: #316AC5;
+	border-width: 1px;
+	border-style: solid; */
+	padding: 3px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight:normal;
+	font-size: 12px;
+}
+
+A:link.sub_menu_on {color: #000000; font-style:normal; text-decoration:none;}
+
+A:visited.sub_menu_on {color: #000000; font-style:normal; text-decoration:none;}
+
+A:active.sub_menu_on {color:#000000; font-style:normal; text-decoration:none;}
+
+A:hover.sub_menu_on {color:#000000; font-style:normal; text-decoration:none;}

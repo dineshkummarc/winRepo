@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+
+
+<title>MSFN's Unattended Windows : Unattended Windows Introduction</title>
+
+
+
+<link rel="stylesheet" type="text/css" href="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/style.css">
+
+
+
+
+
+
+
+</head>
+
+
+
+<body><div id="itxtexclude"><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/searchbar_1297857114.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/relatedcontentlist_1287400603.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/relatedcontent_1297857148.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/init.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/ga.js"></script><link rel="stylesheet" type="text/css" href="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/itxtcss_1302620257.css" id="itxtcss"><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/ui_1304979164.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/tmpl_1304979121.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/metrics_1299511498.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/itxt_1302793023.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/fx_1286533523.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/debug_1301668411.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/data_1302620257.js"></script><script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/core_1302620257.js"></script></div>
+
+
+
+<table class="pageblock" cellpadding="0" cellspacing="0">
+
+
+
+<tbody><tr><td colspan="2"><img src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/unattended-top.jpg" alt="Unattended XPCD" style="vertical-align: bottom;" height="137" width="900"></td></tr>
+
+
+
+<tr><td class="nav">
+
+
+
+    <script type="text/JavaScript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/milonic_src.js"></script><style>.milonic{width:1px;visibility:hidden;position:absolute}</style>
+
+
+
+    <script type="text/JavaScript">
+
+
+
+	  // <![CDATA[
+
+
+
+		if(ns4)_d.write("<scr"+"ipt language=JavaScript src=/global/menu/mmenuns4.js><\/scr"+"ipt>");		
+
+
+
+		else _d.write("<scr"+"ipt language=JavaScript src=/global/menu/mmenudom.js><\/scr"+"ipt>"); 
+
+
+
+	  // ]]>
+
+
+
+	  </script><script language="JavaScript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/mmenudom.js"></script><script>function $9(ap){return _f}</script>
+
+
+
+    <script type="text/JavaScript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/menu_data.js"></script>
+
+
+
+	<script type="text/javascript">
+
+
+
+	
+
+
+
+	with(milonic=new menuname("Main Menu")){
+style=XPMainStyle;
+top=10;
+left=10;
+alwaysvisible=1;
+orientation="vertical";
+margin=4;
+position="relative";
+aI("text= Home ;showmenu=Home;url=/unattended.xp/view/web/1/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/homepage_gap.gif;");
+aI("text= Beginning Users ;showmenu=Beginner;image=/global/menu/icons/tool_gap.gif;");
+aI("text= Intermediate Users ;showmenu=Intermediate;image=/global/menu/icons/drivers_gap.gif;");
+aI("text= Advanced Users ;showmenu=Advanced;image=/global/menu/icons/cosmet_gap.gif;");
+aI("text= Reference ;showmenu=Reference;image=/global/menu/icons/question_gap.gif;");
+aI("text= Forums ;url=http://www.msfn.org/board;image=/global/menu/icons/forum_gap.gif;");
+}
+
+/*What follows is the Home branch of the menu */
+
+/* Moved to Template File */
+
+/* What follows is for the Beginner branch of the menu */
+
+with(milonic=new menuname("Beginner")){
+style=XPMenuStyle;
+overflow="scroll";
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/2/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= Step 1 - Creating a Local Source;url=/unattended.xp/view/web/3/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/hdd.gif;");
+aI("text= Step 2 - Slipstreaming Latest Service Pack;url=/unattended.xp/view/web/6/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/software.gif;");
+aI("text= Step 3 - Updating Setup Source with Latest Hotfixes;showmenu=Hotfixes;url=;image=/global/menu/icons/windowsupdate.gif;");
+aI("text= Step 4 - Creating a Basic Unattended Setup;url=/unattended.xp/view/web/7/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/notepad.gif;separatorsize=1;");
+aI("text= Finalising and Testing the CD;url=/unattended.xp/view/web/8/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/cd.gif;");
+}
+
+with(milonic=new menuname("Hotfixes")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/26/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/homepage.gif;separatorsize=1;");
+aI("text= Getting the Hotfixes;url=/unattended.xp/view/web/5/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/ie.gif;");
+aI("text= Installing the Hotfixes;showmenu=Hotfixes_Install;url=;image=/global/menu/icons/windowsupdate.gif;");
+
+}
+
+with(milonic=new menuname("Hotfixes_Install")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/6/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/homepage.gif;separatorsize=1;");
+aI("text= Post-SP2 Hotfix Switch;url=/unattended.xp/view/web/23/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/hotfix.gif;");
+aI("text= SVCPACK.INF Method;url=/unattended.xp/view/web/24/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/ini.gif;");
+aI("text= nLite;url=/unattended.xp/view/web/25/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/nlite.gif;");
+
+}
+
+/* What follows is the Intermediate branch of the menu */
+
+with(milonic=new menuname("Intermediate")){
+style=XPMenuStyle;
+overflow="scroll";
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/28/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;");
+aI("text= Methods of Install;showmenu=Methods;image=/global/menu/icons/notepad.gif;separatorsize=1;");
+aI("text= Device Drivers;showmenu=Drivers;image=/global/menu/icons/drivers.gif;");
+aI("text= Applications;showmenu=Apps;image=/global/menu/icons/software.gif;");
+aI("text= Adding Users;url=/unattended.xp/view/web/27/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/users.gif;");
+aI("text= Activation;url=/unattended.xp/view/web/29/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/windowsupdate.gif");
+aI("text= Regtweaks;showmenu=RegDB;image=/global/menu/icons/regedit.gif;;separatorsize=1;");
+aI("text= Finalising and Testing the CD;url=/unattended.xp/view/web/8/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/cd.gif;");
+}
+
+with(milonic=new menuname("Methods")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/32/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= Batch Scripting;url=/unattended.xp/view/web/30/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/batch.gif;");
+aI("text= RunOnceEX;url=/unattended.xp/view/web/31/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/tool.gif;");
+}
+
+with(milonic=new menuname("Drivers")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/33/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= Drivers via WINNT.SIF;url=/unattended.xp/view/web/34/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/drivers.gif;");
+aI("text= Drivers from CD;url=/unattended.xp/view/web/35/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/cd.gif;");
+aI("text= RAID/SATA Drivers;url=/unattended.xp/view/web/36/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/ini.gif;separatorsize=1;");
+aI("text= Bâshrat the Sneaky's DriverPacks;url=/unattended.xp/view/web/37/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;");
+}
+
+with(milonic=new menuname("Apps")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/38/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= Application Database;showmenu=AppsDB;image=/global/menu/icons/question.gif;separatorsize=1;");
+aI("text= MS Office XP/2003;showmenu=Office;url=;image=/global/menu/icons/office.gif;separatorsize=1;");
+aI("text= Inno Setup;url=/unattended.xp/view/web/39/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;");
+aI("text= Installshield;url=/unattended.xp/view/web/40/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;");
+aI("text= NSIS;url=/unattended.xp/view/web/41/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;");
+aI("text= Windows Installer (.msi);url=/unattended.xp/view/web/42/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;");
+aI("text= Wise Installer;url=/unattended.xp/view/web/43/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;");
+}
+
+with(milonic=new menuname("AppsDB")){
+style=XPMenuStyle;
+margin=4;
+
+aI("text= Application Database;url=/unattended.xp/page/list/switch/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/question.gif;");
+}
+
+with(milonic=new menuname("Office")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Office XP Index;url=/unattended.xp/view/web/47/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/homepage.gif");
+aI("text= Simple Installation;url=/unattended.xp/view/web/44/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/software.gif");
+aI("text= Advanced Installation;url=/unattended.xp/view/web/45/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/tool.gif;separatorsize=1;");
+aI("text= Office 2003 Index;url=/unattended.xp/view/web/46/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/homepage.gif");
+aI("text= Office 2003 Slipstreaming;url=/unattended.xp/view/web/48/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/cd.gif;");
+aI("text= Simple Installation;url=/unattended.xp/view/web/49/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/software.gif");
+aI("text= Advanced Installation;url=/unattended.xp/view/web/50/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/tool.gif;");
+
+}
+
+with(milonic=new menuname("RegDB")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/17/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;separatorsize=1;");
+
+aI("text= Registry Tweak Database;url=/unattended.xp/page/list/registry/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/question.gif;");
+}
+
+/* What follows is the Advanced banch of the menu */
+
+with(milonic=new menuname("Advanced")){
+style=XPMenuStyle;
+overflow="scroll";
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/55/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;");
+aI("text= Advanced Methods of Install;showmenu=Methods_Adv;image=/global/menu/icons/notepad.gif;separatorsize=1;");
+aI("text= Using Modified System Files;showmenu=Mod_System;image=/global/menu/icons/dll.gif;");
+aI("text= Cosmetics;showmenu=Cosmetics;image=/global/menu/icons/cosmet.gif;");
+aI("text= Slimming down your CD/DVD;url=/unattended.xp/view/web/57/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/space.gif;");
+aI("text= Creating a Multiboot CD/DVD;url=/unattended.xp/view/web/56/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/cd.gif;");
+aI("text= Member Created Applications;url=/unattended.xp/view/web/58/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/software.gif;separatorsize=1;");
+aI("text= Finalising and Testing the CD;url=/unattended.xp/view/web/8/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/cd.gif;");
+}
+
+with(milonic=new menuname("Methods_Adv")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/63/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= RunOnceEX from CD;url=/unattended.xp/view/web/59/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/cd.gif;");
+aI("text= Windows Post-Installer;url=/unattended.xp/view/web/62/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/software.gif;");
+aI("text= Windows Installation Helper Utility;url=/unattended.xp/view/web/61/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/wihu.gif;");
+aI("text= XPlode;url=/unattended.xp/view/web/60/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/xplode.gif;");
+}
+
+with(milonic=new menuname("Mod_System")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/68/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= Unsigned Visual Styles;url=/unattended.xp/view/web/67/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/cd.gif;");
+aI("text= More Concurrent Connections;url=/unattended.xp/view/web/65/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/software.gif;");
+aI("text= Windows File Protection;url=/unattended.xp/view/web/66/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/wihu.gif;");
+aI("text= Other Modified files;url=/unattended.xp/view/web/64/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/tool.gif;");
+}
+
+with(milonic=new menuname("Cosmetics")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/79/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= Setup Billboard;showmenu=Billboard;image=/global/menu/icons/cd.gif;");
+aI("text= Boot Screen;url=/unattended.xp/view/web/51/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/software.gif;");
+aI("text= Themes;url=/unattended.xp/view/web/76/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/wihu.gif;");
+aI("text= Logon Screens;url=/unattended.xp/view/web/78/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/tool.gif;");
+aI("text= Adding custom OEM Info;url=/unattended.xp/view/web/77/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/tool.gif;");
+}
+
+with(milonic=new menuname("Billboard")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/75/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= New Style Setup Billboards;showmenu=New_Billboard;image=/global/menu/icons/cd.gif;");
+aI("text= Classic Style Setup Billboards;url=/unattended.xp/view/web/74/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/software.gif;");
+}
+
+with(milonic=new menuname("New_Billboard")){
+style=XPMenuStyle;
+margin=4;
+aI("text= Introduction;url=/unattended.xp/view/web/73/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= Background Image;url=/unattended.xp/view/web/71/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/cd.gif;");
+aI("text= Other Images to Change;url=/unattended.xp/view/web/72/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/software.gif;");
+aI("text= Text;url=/unattended.xp/view/web/70/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/software.gif;");
+aI("text= Colors;url=/unattended.xp/view/web/69/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/software.gif;");
+}
+
+/* What follows is the reference branch of the menu */
+with(milonic=new menuname("Reference")){
+style=XPMenuStyle;
+margin=4;
+aI("text= FAQ;url=/unattended.xp/page/list/faq/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/question.gif;separatorsize=1;");
+aI("text= Timeline;url=/unattended.xp/view/web/13/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/timeline.gif");
+aI("text= winnt.sif Reference;url=/unattended.xp/view/web/19/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;");
+aI("text= Overview of the $OEM$ Folders;url=/unattended.xp/view/web/18/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/folder.gif");
+aI("text= CMDLINES.TXT Explained;url=/unattended.xp/view/web/14/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/question.gif;");
+aI("text= [GuiRunonce];url=/unattended.xp/view/web/81/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/question.gif;separatorsize=1;");
+aI("text= Crashcourse in Switches;url=/unattended.xp/view/web/21/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;");
+aI("text= Using CDIMAGE GUI;url=/unattended.xp/view/web/15/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/cd.gif;");
+aI("text= Virtual Machine Tips;url=/unattended.xp/view/web/20/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/virtual.gif;separatorsize=1;");
+aI("text= Compressed Files;url=/unattended.xp/view/web/16/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif");
+aI("text= Localization: MUI and Regional Options;url=/unattended.xp/view/web/82/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/dll.gif;");
+aI("text= Examples;url=/unattended.xp/view/web/12/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;separatorsize=1;");
+aI("text= Member Sites;url=/unattended.xp/view/web/11/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/favourites.gif;");
+aI("text= Downloads;url=/unattended.xp/view/web/10/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/software.gif;separatorsize=1;");
+aI("text= Credits/Copyright;url=/unattended.xp/view/web/9/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/information.gif;");
+}
+
+//drawMenus();
+
+
+
+
+	
+
+
+
+	/*What follows is the site-specific stuff of the menu */
+
+
+
+	with(milonic=new menuname("Home")){
+
+
+
+	style=XPMenuStyle;
+
+
+
+	overflow="scroll";
+
+
+
+	margin=4;
+
+
+
+	aI("text= Changelog;url=/unattended.xp/changelog/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/notepad.gif;");
+
+
+
+	aI("text= Sitemap;url=/unattended.xp/sitemap/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/tool.gif;separatorsize=1;");
+
+
+
+	aI("text= Login;url=/unattended.xp/login/SESSID=5e1c9158972d6cebb05d434ea9ff4793/;image=/global/menu/icons/tool.gif;separatorsize=1;");
+
+
+
+	}
+
+
+
+	// drawMenus();
+
+
+
+	</script>
+ <script type="text/JavaScript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/preloadmenuimages.js"></script>
+
+	<script type="text/javascript">
+
+	drawMenus();
+	</script><div class="root_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu0" style="padding: 4px; border: 0px solid rgb(225, 225, 225); z-index: 999; visibility: visible; width: 157px;"><table class="milonictable" style="padding: 0px;" id="tbl0" border="0" cellpadding="0" cellspacing="0"><tbody><tr id="pTR0"><td id="el0" onmouseover="h$(0)" class="root_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl0" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td0"><td valign="middle"><img onload="_iniIF(0)" style="display: block;" id="img0" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/homepage_gap.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(0)" href="http://unattended.msfn.org/unattended.xp/view/web/1/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="root_menu_off" id="lnk0" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;"> Home </a></td></tr></tbody></table></td></tr><tr><td style="padding: 0px;" id="sep0" align="center"><div style=";background:#E1E1E1;overflow:hidden;width:100%;;padding:0px;height:4px;font-size:1px;"></div></td></tr><tr id="pTR1"><td id="el1" onmouseover="h$(1)" class="root_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl1" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td1"><td valign="middle"><img onload="_iniIF(0)" style="display: block;" id="img1" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/tool_gap.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><div onclick="$K(1)" name="mM1" onfocus="_iF0C(1)" href="undefined" class="root_menu_off" id="lnk1" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Beginning Users&nbsp;</div></td></tr></tbody></table></td></tr><tr><td style="padding: 0px;" id="sep1" align="center"><div style=";background:#E1E1E1;overflow:hidden;width:100%;;padding:0px;height:4px;font-size:1px;"></div></td></tr><tr id="pTR2"><td id="el2" onmouseover="h$(2)" class="root_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl2" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td2"><td valign="middle"><img onload="_iniIF(0)" style="display: block;" id="img2" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/drivers_gap.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><div onclick="$K(2)" name="mM1" onfocus="_iF0C(2)" href="undefined" class="root_menu_off" id="lnk2" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Intermediate Users&nbsp;</div></td></tr></tbody></table></td></tr><tr><td style="padding: 0px;" id="sep2" align="center"><div style=";background:#E1E1E1;overflow:hidden;width:100%;;padding:0px;height:4px;font-size:1px;"></div></td></tr><tr id="pTR3"><td id="el3" onmouseover="h$(3)" class="root_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl3" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td3"><td valign="middle"><img onload="_iniIF(0)" style="display: block;" id="img3" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/cosmet_gap.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><div onclick="$K(3)" name="mM1" onfocus="_iF0C(3)" href="undefined" class="root_menu_off" id="lnk3" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Advanced Users&nbsp;</div></td></tr></tbody></table></td></tr><tr><td style="padding: 0px;" id="sep3" align="center"><div style=";background:#E1E1E1;overflow:hidden;width:100%;;padding:0px;height:4px;font-size:1px;"></div></td></tr><tr id="pTR4"><td id="el4" onmouseover="h$(4)" class="root_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl4" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td4"><td valign="middle"><img onload="_iniIF(0)" style="display: block;" id="img4" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/question_gap.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><div onclick="$K(4)" name="mM1" onfocus="_iF0C(4)" href="undefined" class="root_menu_off" id="lnk4" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Reference&nbsp;</div></td></tr></tbody></table></td></tr><tr><td style="padding: 0px;" id="sep4" align="center"><div style=";background:#E1E1E1;overflow:hidden;width:100%;;padding:0px;height:4px;font-size:1px;"></div></td></tr><tr id="pTR5"><td id="el5" onmouseover="h$(5)" class="root_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl5" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td5"><td valign="middle"><img onload="_iniIF(0)" style="display: block;" id="img5" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/forum_gap.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(5)" href="http://www.msfn.org/board" class="root_menu_off" id="lnk5" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Forums&nbsp;</a></td></tr></tbody></table></td></tr></tbody></table> <a target="" title="" name="mM1" id="mmlink0" href="http://unattended.msfn.org/unattended.xp/view/web/1/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" onclick="return $K(this._itemRef)" onmouseover="_mot=$P(_mot);return $L(this._itemRef)" style="line-height: normal; background: none repeat scroll 0% 0% transparent; text-decoration: none; height: 22px; width: 157px; overflow: hidden; position: absolute; visibility: hidden; z-index: 1; top: 141px; left: 4px;"></a></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu1" style="padding: 4px; border: 1px solid rgb(138, 134, 122); z-index: 1005; visibility: hidden; position: absolute; top: 169px; background-image: url(&quot;/global/menu/icons/winxp_test.gif&quot;); background-color: rgb(255, 255, 255); width: 360px; left: 155px;"><table class="milonictable" style="padding: 0px;" id="tbl1" border="0" cellpadding="0" cellspacing="0"><tbody><tr id="pTR6"><td id="el6" onmouseover="h$(6)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl6" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td6"><td align="left" valign="middle"><img onload="_iniIF(1)" style="display: block;" id="img6" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/information.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(6)" href="http://unattended.msfn.org/unattended.xp/view/web/2/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk6" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Introduction</a></td></tr></tbody></table></td></tr><tr><td height="2"></td></tr><tr><td style="padding: 0px;" id="sep6" align="center"><div style=";background:#8A867A;overflow:hidden;width:95%;;padding:0px;height:1px;font-size:1px;"></div></td></tr><tr><td height="2"></td></tr><tr id="pTR7"><td id="el7" onmouseover="h$(7)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl7" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td7"><td align="left" valign="middle"><img onload="_iniIF(1)" style="display: block;" id="img7" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/hdd.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(7)" href="http://unattended.msfn.org/unattended.xp/view/web/3/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk7" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Step 1 - Creating a Local Source</a></td></tr></tbody></table></td></tr><tr id="pTR8"><td id="el8" onmouseover="h$(8)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl8" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td8"><td align="left" valign="middle"><img onload="_iniIF(1)" style="display: block;" id="img8" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/software.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(8)" href="http://unattended.msfn.org/unattended.xp/view/web/6/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk8" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Step 2 - Slipstreaming Latest Service Pack</a></td></tr></tbody></table></td></tr><tr id="pTR9"><td id="el9" onmouseover="h$(9)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl9" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td9"><td align="left" valign="middle"><img onload="_iniIF(1)" style="display: block;" id="img9" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/windowsupdate.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><div onclick="$K(9)" name="mM1" onfocus="_iF0C(9)" href="" class="sub_menu_off" id="lnk9" style="border:none;;background:transparent;display:block;   ">&nbsp;Step 3 - Updating Setup Source with Latest Hotfixes</div></td><td style="font-size: 1px;" valign="middle" width="1"><img id="simg9" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/arrow.gif"></td></tr></tbody></table></td></tr><tr id="pTR10"><td id="el10" onmouseover="h$(10)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl10" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td10"><td align="left" valign="middle"><img onload="_iniIF(1)" style="display: block;" id="img10" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/notepad.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(10)" href="http://unattended.msfn.org/unattended.xp/view/web/7/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk10" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Step 4 - Creating a Basic Unattended Setup</a></td></tr></tbody></table></td></tr><tr><td height="2"></td></tr><tr><td style="padding: 0px;" id="sep10" align="center"><div style=";background:#8A867A;overflow:hidden;width:95%;;padding:0px;height:1px;font-size:1px;"></div></td></tr><tr><td height="2"></td></tr><tr id="pTR11"><td id="el11" onmouseover="h$(11)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl11" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td11"><td align="left" valign="middle"><img onload="_iniIF(1)" style="display: block;" id="img11" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/cd.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(11)" href="http://unattended.msfn.org/unattended.xp/view/web/8/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk11" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Finalising and Testing the CD</a></td></tr></tbody></table></td></tr></tbody></table> <a name="mM1" id="mmlink1" href="#" onclick="return $K(this._itemRef)" onmouseover="_mot=$P(_mot);return $L(this._itemRef)" style="line-height: normal; background: none repeat scroll 0% 0% transparent; text-decoration: none; height: 1px; width: 1px; overflow: hidden; position: absolute; visibility: hidden;"></a></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu2" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu3" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu4" style="padding: 4px; border: 1px solid rgb(138, 134, 122); z-index: 1001; visibility: hidden; position: absolute; top: 195px; background-image: url(&quot;/global/menu/icons/winxp_test.gif&quot;); background-color: rgb(255, 255, 255); width: 207px; left: 155px;"><table class="milonictable" style="padding: 0px;" id="tbl4" border="0" cellpadding="0" cellspacing="0"><tbody><tr id="pTR19"><td id="el19" onmouseover="h$(19)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl19" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td19"><td align="left" valign="middle"><img onload="_iniIF(4)" style="display: block;" id="img19" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/information.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(19)" href="http://unattended.msfn.org/unattended.xp/view/web/28/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk19" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Introduction</a></td></tr></tbody></table></td></tr><tr id="pTR20"><td id="el20" onmouseover="h$(20)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl20" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td20"><td align="left" valign="middle"><img onload="_iniIF(4)" style="display: block;" id="img20" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/notepad.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><div onclick="$K(20)" name="mM1" onfocus="_iF0C(20)" href="undefined" class="sub_menu_off" id="lnk20" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Methods of Install</div></td><td style="font-size: 1px;" valign="middle" width="1"><img id="simg20" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/arrow.gif"></td></tr></tbody></table></td></tr><tr><td height="2"></td></tr><tr><td style="padding: 0px;" id="sep20" align="center"><div style=";background:#8A867A;overflow:hidden;width:95%;;padding:0px;height:1px;font-size:1px;"></div></td></tr><tr><td height="2"></td></tr><tr id="pTR21"><td id="el21" onmouseover="h$(21)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl21" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td21"><td align="left" valign="middle"><img onload="_iniIF(4)" style="display: block;" id="img21" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/drivers.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><div onclick="$K(21)" name="mM1" onfocus="_iF0C(21)" href="undefined" class="sub_menu_off" id="lnk21" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Device Drivers</div></td><td style="font-size: 1px;" valign="middle" width="1"><img id="simg21" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/arrow.gif"></td></tr></tbody></table></td></tr><tr id="pTR22"><td id="el22" onmouseover="h$(22)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl22" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td22"><td align="left" valign="middle"><img onload="_iniIF(4)" style="display: block;" id="img22" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/software.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><div onclick="$K(22)" name="mM1" onfocus="_iF0C(22)" href="undefined" class="sub_menu_off" id="lnk22" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Applications</div></td><td style="font-size: 1px;" valign="middle" width="1"><img id="simg22" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/arrow.gif"></td></tr></tbody></table></td></tr><tr id="pTR23"><td id="el23" onmouseover="h$(23)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl23" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td23"><td align="left" valign="middle"><img onload="_iniIF(4)" style="display: block;" id="img23" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/users.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(23)" href="http://unattended.msfn.org/unattended.xp/view/web/27/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk23" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Adding Users</a></td></tr></tbody></table></td></tr><tr id="pTR24"><td id="el24" onmouseover="h$(24)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl24" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td24"><td align="left" valign="middle"><img onload="_iniIF(4)" style="display: block;" id="img24" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/windowsupdate.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(24)" href="http://unattended.msfn.org/unattended.xp/view/web/29/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk24" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Activation</a></td></tr></tbody></table></td></tr><tr id="pTR25"><td id="el25" onmouseover="h$(25)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl25" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td25"><td align="left" valign="middle"><img onload="_iniIF(4)" style="display: block;" id="img25" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/regedit.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><div onclick="$K(25)" name="mM1" onfocus="_iF0C(25)" href="undefined" class="sub_menu_off" id="lnk25" style="border:none;;background:transparent;display:block;   ">&nbsp;Regtweaks</div></td><td style="font-size: 1px;" valign="middle" width="1"><img id="simg25" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/arrow.gif"></td></tr></tbody></table></td></tr><tr><td height="2"></td></tr><tr><td style="padding: 0px;" id="sep25" align="center"><div style=";background:#8A867A;overflow:hidden;width:95%;;padding:0px;height:1px;font-size:1px;"></div></td></tr><tr><td height="2"></td></tr><tr id="pTR26"><td id="el26" onmouseover="h$(26)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl26" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td26"><td align="left" valign="middle"><img onload="_iniIF(4)" style="display: block;" id="img26" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/cd.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(26)" href="http://unattended.msfn.org/unattended.xp/view/web/8/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk26" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Finalising and Testing the CD</a></td></tr></tbody></table></td></tr></tbody></table> <a target="" title="" name="mM1" id="mmlink4" href="javascript:void(0)" onclick="return $K(this._itemRef)" onmouseover="_mot=$P(_mot);return $L(this._itemRef)" style="line-height: normal; background: none repeat scroll 0% 0% transparent; text-decoration: none; height: 18px; width: 205px; overflow: hidden; position: absolute; visibility: hidden; z-index: 1; border: 1px solid rgb(49, 106, 197); top: 69px; left: 4px;"></a></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu5" style="padding: 4px; border: 1px solid rgb(138, 134, 122); z-index: 499; visibility: hidden; position: absolute; top: 221px; background-image: url(&quot;/global/menu/icons/winxp_test.gif&quot;); background-color: rgb(255, 255, 255); width: 119px; left: 361px;"><table class="milonictable" style="padding: 0px;" id="tbl5" border="0" cellpadding="0" cellspacing="0"><tbody><tr id="pTR27"><td id="el27" onmouseover="h$(27)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl27" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td27"><td align="left" valign="middle"><img onload="_iniIF(5)" style="display: block;" id="img27" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/information.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(27)" href="http://unattended.msfn.org/unattended.xp/view/web/32/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk27" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Introduction</a></td></tr></tbody></table></td></tr><tr><td height="2"></td></tr><tr><td style="padding: 0px;" id="sep27" align="center"><div style=";background:#8A867A;overflow:hidden;width:95%;;padding:0px;height:1px;font-size:1px;"></div></td></tr><tr><td height="2"></td></tr><tr id="pTR28"><td id="el28" onmouseover="h$(28)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl28" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td28"><td align="left" valign="middle"><img onload="_iniIF(5)" style="display: block;" id="img28" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/batch.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(28)" href="http://unattended.msfn.org/unattended.xp/view/web/30/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk28" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Batch Scripting</a></td></tr></tbody></table></td></tr><tr id="pTR29"><td id="el29" onmouseover="h$(29)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl29" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td29"><td align="left" valign="middle"><img onload="_iniIF(5)" style="display: block;" id="img29" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/tool.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(29)" href="http://unattended.msfn.org/unattended.xp/view/web/31/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk29" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;RunOnceEX</a></td></tr></tbody></table></td></tr></tbody></table> <a name="mM1" id="mmlink5" href="#" onclick="return $K(this._itemRef)" onmouseover="_mot=$P(_mot);return $L(this._itemRef)" style="line-height: normal; background: none repeat scroll 0% 0% transparent; text-decoration: none; height: 1px; width: 1px; overflow: hidden; position: absolute;"></a></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu6" style="padding: 4px; border: 1px solid rgb(138, 134, 122); z-index: 499; visibility: hidden; position: absolute; top: 246px; background-image: url(&quot;/global/menu/icons/winxp_test.gif&quot;); background-color: rgb(255, 255, 255); width: 237px; left: 361px;"><table class="milonictable" style="padding: 0px;" id="tbl6" border="0" cellpadding="0" cellspacing="0"><tbody><tr id="pTR30"><td id="el30" onmouseover="h$(30)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl30" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td30"><td align="left" valign="middle"><img onload="_iniIF(6)" style="display: block;" id="img30" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/information.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(30)" href="http://unattended.msfn.org/unattended.xp/view/web/33/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk30" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Introduction</a></td></tr></tbody></table></td></tr><tr><td height="2"></td></tr><tr><td style="padding: 0px;" id="sep30" align="center"><div style=";background:#8A867A;overflow:hidden;width:95%;;padding:0px;height:1px;font-size:1px;"></div></td></tr><tr><td height="2"></td></tr><tr id="pTR31"><td id="el31" onmouseover="h$(31)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl31" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td31"><td align="left" valign="middle"><img onload="_iniIF(6)" style="display: block;" id="img31" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/drivers.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(31)" href="http://unattended.msfn.org/unattended.xp/view/web/34/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk31" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Drivers via WINNT.SIF</a></td></tr></tbody></table></td></tr><tr id="pTR32"><td id="el32" onmouseover="h$(32)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl32" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td32"><td align="left" valign="middle"><img onload="_iniIF(6)" style="display: block;" id="img32" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/cd.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(32)" href="http://unattended.msfn.org/unattended.xp/view/web/35/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk32" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Drivers from CD</a></td></tr></tbody></table></td></tr><tr id="pTR33"><td id="el33" onmouseover="h$(33)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl33" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td33"><td align="left" valign="middle"><img onload="_iniIF(6)" style="display: block;" id="img33" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/ini.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(33)" href="http://unattended.msfn.org/unattended.xp/view/web/36/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk33" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;RAID/SATA Drivers</a></td></tr></tbody></table></td></tr><tr><td height="2"></td></tr><tr><td style="padding: 0px;" id="sep33" align="center"><div style=";background:#8A867A;overflow:hidden;width:95%;;padding:0px;height:1px;font-size:1px;"></div></td></tr><tr><td height="2"></td></tr><tr id="pTR34"><td id="el34" onmouseover="h$(34)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl34" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td34"><td align="left" valign="middle"><img onload="_iniIF(6)" style="display: block;" id="img34" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/information.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(34)" href="http://unattended.msfn.org/unattended.xp/view/web/37/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk34" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Bâshrat the Sneaky's DriverPacks</a></td></tr></tbody></table></td></tr></tbody></table> <a name="mM1" id="mmlink6" href="#" onclick="return $K(this._itemRef)" onmouseover="_mot=$P(_mot);return $L(this._itemRef)" style="line-height: normal; background: none repeat scroll 0% 0% transparent; text-decoration: none; height: 1px; width: 1px; overflow: hidden; position: absolute;"></a></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu7" style="padding: 4px; border: 1px solid rgb(138, 134, 122); z-index: 1004; visibility: hidden; position: absolute; top: -999px; background-image: url(&quot;/global/menu/icons/winxp_test.gif&quot;); background-color: rgb(255, 255, 255); width: 179px; left: -999px;"><table class="milonictable" style="padding: 0px;" id="tbl7" border="0" cellpadding="0" cellspacing="0"><tbody><tr id="pTR35"><td id="el35" onmouseover="h$(35)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl35" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td35"><td align="left" valign="middle"><img onload="_iniIF(7)" style="display: block;" id="img35" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/information.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(35)" href="http://unattended.msfn.org/unattended.xp/view/web/38/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk35" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Introduction</a></td></tr></tbody></table></td></tr><tr><td height="2"></td></tr><tr><td style="padding: 0px;" id="sep35" align="center"><div style=";background:#8A867A;overflow:hidden;width:95%;;padding:0px;height:1px;font-size:1px;"></div></td></tr><tr><td height="2"></td></tr><tr id="pTR36"><td id="el36" onmouseover="h$(36)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl36" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td36"><td align="left" valign="middle"><img onload="_iniIF(7)" style="display: block;" id="img36" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/question.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><div onclick="$K(36)" name="mM1" onfocus="_iF0C(36)" href="undefined" class="sub_menu_off" id="lnk36" style="border:none;;background:transparent;display:block;   ">&nbsp;Application Database</div></td><td style="font-size: 1px;" valign="middle" width="1"><img id="simg36" onload="_iniIF(7)" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/arrow.gif"></td></tr></tbody></table></td></tr><tr><td height="2"></td></tr><tr><td style="padding: 0px;" id="sep36" align="center"><div style=";background:#8A867A;overflow:hidden;width:95%;;padding:0px;height:1px;font-size:1px;"></div></td></tr><tr><td height="2"></td></tr><tr id="pTR37"><td id="el37" onmouseover="h$(37)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl37" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td37"><td align="left" valign="middle"><img onload="_iniIF(7)" style="display: block;" id="img37" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/office.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><div onclick="$K(37)" name="mM1" onfocus="_iF0C(37)" href="" class="sub_menu_off" id="lnk37" style="border:none;;background:transparent;display:block;   ">&nbsp;MS Office XP/2003</div></td><td style="font-size: 1px;" valign="middle" width="1"><img id="simg37" onload="_iniIF(7)" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/arrow.gif"></td></tr></tbody></table></td></tr><tr><td height="2"></td></tr><tr><td style="padding: 0px;" id="sep37" align="center"><div style=";background:#8A867A;overflow:hidden;width:95%;;padding:0px;height:1px;font-size:1px;"></div></td></tr><tr><td height="2"></td></tr><tr id="pTR38"><td id="el38" onmouseover="h$(38)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl38" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td38"><td align="left" valign="middle"><img onload="_iniIF(7)" style="display: block;" id="img38" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/information.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(38)" href="http://unattended.msfn.org/unattended.xp/view/web/39/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk38" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Inno Setup</a></td></tr></tbody></table></td></tr><tr id="pTR39"><td id="el39" onmouseover="h$(39)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl39" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td39"><td align="left" valign="middle"><img onload="_iniIF(7)" style="display: block;" id="img39" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/information.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(39)" href="http://unattended.msfn.org/unattended.xp/view/web/40/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk39" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Installshield</a></td></tr></tbody></table></td></tr><tr id="pTR40"><td id="el40" onmouseover="h$(40)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl40" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td40"><td align="left" valign="middle"><img onload="_iniIF(7)" style="display: block;" id="img40" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/information.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(40)" href="http://unattended.msfn.org/unattended.xp/view/web/41/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk40" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;NSIS</a></td></tr></tbody></table></td></tr><tr id="pTR41"><td id="el41" onmouseover="h$(41)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl41" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td41"><td align="left" valign="middle"><img onload="_iniIF(7)" style="display: block;" id="img41" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/information.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(41)" href="http://unattended.msfn.org/unattended.xp/view/web/42/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk41" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Windows Installer (.msi)</a></td></tr></tbody></table></td></tr><tr id="pTR42"><td id="el42" onmouseover="h$(42)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl42" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td42"><td align="left" valign="middle"><img onload="_iniIF(7)" style="display: block;" id="img42" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/information.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(42)" href="http://unattended.msfn.org/unattended.xp/view/web/43/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk42" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Wise Installer</a></td></tr></tbody></table></td></tr></tbody></table> <a target="" title="" name="mM1" id="mmlink7" href="http://unattended.msfn.org/unattended.xp/view/web/38/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" onclick="return $K(this._itemRef)" onmouseover="_mot=$P(_mot);return $L(this._itemRef)" style="line-height: normal; background: none repeat scroll 0% 0% transparent; text-decoration: none; height: 18px; width: 177px; overflow: hidden; position: absolute; visibility: hidden; z-index: 1; border: 1px solid rgb(49, 106, 197); top: 4px; left: 4px;"></a></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu8" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu9" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu10" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu11" style="padding: 4px; border: 1px solid rgb(138, 134, 122); z-index: 1000; visibility: hidden; position: absolute; top: 221px; background-image: url(&quot;/global/menu/icons/winxp_test.gif&quot;); background-color: rgb(255, 255, 255); width: 210px; left: 155px;"><table class="milonictable" style="padding: 0px;" id="tbl11" border="0" cellpadding="0" cellspacing="0"><tbody><tr id="pTR53"><td id="el53" onmouseover="h$(53)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl53" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td53"><td align="left" valign="middle"><img onload="_iniIF(11)" style="display: block;" id="img53" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/information.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(53)" href="http://unattended.msfn.org/unattended.xp/view/web/55/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk53" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Introduction</a></td></tr></tbody></table></td></tr><tr id="pTR54"><td id="el54" onmouseover="h$(54)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl54" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td54"><td align="left" valign="middle"><img onload="_iniIF(11)" style="display: block;" id="img54" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/notepad.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><div onclick="$K(54)" name="mM1" onfocus="_iF0C(54)" href="undefined" class="sub_menu_off" id="lnk54" style="border:none;;background:transparent;display:block;   ">&nbsp;Advanced Methods of Install</div></td><td style="font-size: 1px;" valign="middle" width="1"><img id="simg54" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/arrow.gif"></td></tr></tbody></table></td></tr><tr><td height="2"></td></tr><tr><td style="padding: 0px;" id="sep54" align="center"><div style=";background:#8A867A;overflow:hidden;width:95%;;padding:0px;height:1px;font-size:1px;"></div></td></tr><tr><td height="2"></td></tr><tr id="pTR55"><td id="el55" onmouseover="h$(55)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl55" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td55"><td align="left" valign="middle"><img onload="_iniIF(11)" style="display: block;" id="img55" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/dll.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><div onclick="$K(55)" name="mM1" onfocus="_iF0C(55)" href="undefined" class="sub_menu_off" id="lnk55" style="border:none;;background:transparent;display:block;   ">&nbsp;Using Modified System Files</div></td><td style="font-size: 1px;" valign="middle" width="1"><img id="simg55" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/arrow.gif"></td></tr></tbody></table></td></tr><tr id="pTR56"><td id="el56" onmouseover="h$(56)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl56" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td56"><td align="left" valign="middle"><img onload="_iniIF(11)" style="display: block;" id="img56" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/cosmet.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><div onclick="$K(56)" name="mM1" onfocus="_iF0C(56)" href="undefined" class="sub_menu_off" id="lnk56" style="border:none;;background:transparent;display:block;   ">&nbsp;Cosmetics</div></td><td style="font-size: 1px;" valign="middle" width="1"><img id="simg56" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/arrow.gif"></td></tr></tbody></table></td></tr><tr id="pTR57"><td id="el57" onmouseover="h$(57)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl57" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td57"><td align="left" valign="middle"><img onload="_iniIF(11)" style="display: block;" id="img57" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/space.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(57)" href="http://unattended.msfn.org/unattended.xp/view/web/57/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk57" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Slimming down your CD/DVD</a></td></tr></tbody></table></td></tr><tr id="pTR58"><td id="el58" onmouseover="h$(58)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl58" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td58"><td align="left" valign="middle"><img onload="_iniIF(11)" style="display: block;" id="img58" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/cd.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(58)" href="http://unattended.msfn.org/unattended.xp/view/web/56/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk58" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Creating a Multiboot CD/DVD</a></td></tr></tbody></table></td></tr><tr id="pTR59"><td id="el59" onmouseover="h$(59)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl59" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td59"><td align="left" valign="middle"><img onload="_iniIF(11)" style="display: block;" id="img59" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/software.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(59)" href="http://unattended.msfn.org/unattended.xp/view/web/58/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk59" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Member Created Applications</a></td></tr></tbody></table></td></tr><tr><td height="2"></td></tr><tr><td style="padding: 0px;" id="sep59" align="center"><div style=";background:#8A867A;overflow:hidden;width:95%;;padding:0px;height:1px;font-size:1px;"></div></td></tr><tr><td height="2"></td></tr><tr id="pTR60"><td id="el60" onmouseover="h$(60)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl60" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td60"><td align="left" valign="middle"><img onload="_iniIF(11)" style="display: block;" id="img60" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/cd.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(60)" href="http://unattended.msfn.org/unattended.xp/view/web/8/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk60" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Finalising and Testing the CD</a></td></tr></tbody></table></td></tr></tbody></table> <a name="mM1" id="mmlink11" href="#" onclick="return $K(this._itemRef)" onmouseover="_mot=$P(_mot);return $L(this._itemRef)" style="line-height: normal; background: none repeat scroll 0% 0% transparent; text-decoration: none; height: 1px; width: 1px; overflow: hidden; position: absolute; visibility: hidden;"></a></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu12" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu13" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu14" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu15" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu16" style=";padding:4px;;border:1px solid #8A867A;z-index:499;visibility:hidden;position:absolute;top:-999px;;;background-image:url(/global/menu/icons/winxp_test.gif);;background-color:#FFFFFF"></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu17" style="padding: 4px; border: 1px solid rgb(138, 134, 122); z-index: 1002; visibility: hidden; position: absolute; top: -999px; background-image: url(&quot;/global/menu/icons/winxp_test.gif&quot;); background-color: rgb(255, 255, 255); width: 270px; left: -999px;"><table class="milonictable" style="padding: 0px;" id="tbl17" border="0" cellpadding="0" cellspacing="0"><tbody><tr id="pTR85"><td id="el85" onmouseover="h$(85)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl85" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td85"><td align="left" valign="middle"><img onload="_iniIF(17)" style="display: block;" id="img85" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/question.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(85)" href="http://unattended.msfn.org/unattended.xp/page/list/faq/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk85" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;FAQ</a></td></tr></tbody></table></td></tr><tr><td height="2"></td></tr><tr><td style="padding: 0px;" id="sep85" align="center"><div style=";background:#8A867A;overflow:hidden;width:95%;;padding:0px;height:1px;font-size:1px;"></div></td></tr><tr><td height="2"></td></tr><tr id="pTR86"><td id="el86" onmouseover="h$(86)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl86" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td86"><td align="left" valign="middle"><img onload="_iniIF(17)" style="display: block;" id="img86" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/timeline.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(86)" href="http://unattended.msfn.org/unattended.xp/view/web/13/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk86" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Timeline</a></td></tr></tbody></table></td></tr><tr id="pTR87"><td id="el87" onmouseover="h$(87)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl87" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td87"><td align="left" valign="middle"><img onload="_iniIF(17)" style="display: block;" id="img87" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/information.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(87)" href="http://unattended.msfn.org/unattended.xp/view/web/19/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk87" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;winnt.sif Reference</a></td></tr></tbody></table></td></tr><tr id="pTR88"><td id="el88" onmouseover="h$(88)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl88" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td88"><td align="left" valign="middle"><img onload="_iniIF(17)" style="display: block;" id="img88" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/folder.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(88)" href="http://unattended.msfn.org/unattended.xp/view/web/18/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk88" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Overview of the $OEM$ Folders</a></td></tr></tbody></table></td></tr><tr id="pTR89"><td id="el89" onmouseover="h$(89)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl89" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td89"><td align="left" valign="middle"><img onload="_iniIF(17)" style="display: block;" id="img89" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/question.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(89)" href="http://unattended.msfn.org/unattended.xp/view/web/14/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk89" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;CMDLINES.TXT Explained</a></td></tr></tbody></table></td></tr><tr id="pTR90"><td id="el90" onmouseover="h$(90)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl90" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td90"><td align="left" valign="middle"><img onload="_iniIF(17)" style="display: block;" id="img90" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/question.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(90)" href="http://unattended.msfn.org/unattended.xp/view/web/81/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk90" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;[GuiRunonce]</a></td></tr></tbody></table></td></tr><tr><td height="2"></td></tr><tr><td style="padding: 0px;" id="sep90" align="center"><div style=";background:#8A867A;overflow:hidden;width:95%;;padding:0px;height:1px;font-size:1px;"></div></td></tr><tr><td height="2"></td></tr><tr id="pTR91"><td id="el91" onmouseover="h$(91)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl91" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td91"><td align="left" valign="middle"><img onload="_iniIF(17)" style="display: block;" id="img91" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/information.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(91)" href="http://unattended.msfn.org/unattended.xp/view/web/21/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk91" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Crashcourse in Switches</a></td></tr></tbody></table></td></tr><tr id="pTR92"><td id="el92" onmouseover="h$(92)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl92" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td92"><td align="left" valign="middle"><img onload="_iniIF(17)" style="display: block;" id="img92" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/cd.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(92)" href="http://unattended.msfn.org/unattended.xp/view/web/15/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk92" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Using CDIMAGE GUI</a></td></tr></tbody></table></td></tr><tr id="pTR93"><td id="el93" onmouseover="h$(93)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl93" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td93"><td align="left" valign="middle"><img onload="_iniIF(17)" style="display: block;" id="img93" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/virtual.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(93)" href="http://unattended.msfn.org/unattended.xp/view/web/20/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk93" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Virtual Machine Tips</a></td></tr></tbody></table></td></tr><tr><td height="2"></td></tr><tr><td style="padding: 0px;" id="sep93" align="center"><div style=";background:#8A867A;overflow:hidden;width:95%;;padding:0px;height:1px;font-size:1px;"></div></td></tr><tr><td height="2"></td></tr><tr id="pTR94"><td id="el94" onmouseover="h$(94)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl94" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td94"><td align="left" valign="middle"><img onload="_iniIF(17)" style="display: block;" id="img94" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/information.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(94)" href="http://unattended.msfn.org/unattended.xp/view/web/16/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk94" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Compressed Files</a></td></tr></tbody></table></td></tr><tr id="pTR95"><td id="el95" onmouseover="h$(95)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl95" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td95"><td align="left" valign="middle"><img onload="_iniIF(17)" style="display: block;" id="img95" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/dll.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(95)" href="http://unattended.msfn.org/unattended.xp/view/web/82/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk95" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Localization: MUI and Regional Options</a></td></tr></tbody></table></td></tr><tr id="pTR96"><td id="el96" onmouseover="h$(96)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl96" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td96"><td align="left" valign="middle"><img onload="_iniIF(17)" style="display: block;" id="img96" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/information.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(96)" href="http://unattended.msfn.org/unattended.xp/view/web/12/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk96" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Examples</a></td></tr></tbody></table></td></tr><tr><td height="2"></td></tr><tr><td style="padding: 0px;" id="sep96" align="center"><div style=";background:#8A867A;overflow:hidden;width:95%;;padding:0px;height:1px;font-size:1px;"></div></td></tr><tr><td height="2"></td></tr><tr id="pTR97"><td id="el97" onmouseover="h$(97)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl97" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td97"><td align="left" valign="middle"><img onload="_iniIF(17)" style="display: block;" id="img97" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/favourites.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(97)" href="http://unattended.msfn.org/unattended.xp/view/web/11/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk97" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Member Sites</a></td></tr></tbody></table></td></tr><tr id="pTR98"><td id="el98" onmouseover="h$(98)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl98" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td98"><td align="left" valign="middle"><img onload="_iniIF(17)" style="display: block;" id="img98" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/software.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(98)" href="http://unattended.msfn.org/unattended.xp/view/web/10/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk98" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Downloads</a></td></tr></tbody></table></td></tr><tr><td height="2"></td></tr><tr><td style="padding: 0px;" id="sep98" align="center"><div style=";background:#8A867A;overflow:hidden;width:95%;;padding:0px;height:1px;font-size:1px;"></div></td></tr><tr><td height="2"></td></tr><tr id="pTR99"><td id="el99" onmouseover="h$(99)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl99" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td99"><td align="left" valign="middle"><img onload="_iniIF(17)" style="display: block;" id="img99" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/information.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(99)" href="http://unattended.msfn.org/unattended.xp/view/web/9/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk99" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Credits/Copyright</a></td></tr></tbody></table></td></tr></tbody></table> <a name="mM1" id="mmlink17" href="#" onclick="return $K(this._itemRef)" onmouseover="_mot=$P(_mot);return $L(this._itemRef)" style="line-height: normal; background: none repeat scroll 0% 0% transparent; text-decoration: none; height: 1px; width: 1px; overflow: hidden; position: absolute; visibility: hidden;"></a></div><div class="sub_menu_off" onmouseout="$I()" onmouseover="$J()" onselectstart="return _f" id="menu18" style="padding: 4px; border: 1px solid rgb(138, 134, 122); z-index: 1006; visibility: hidden; position: absolute; top: -999px; background-image: url(&quot;/global/menu/icons/winxp_test.gif&quot;); background-color: rgb(255, 255, 255); width: 94px; left: -999px; overflow: hidden;"><table class="milonictable" style="padding: 0px;" id="tbl18" border="0" cellpadding="0" cellspacing="0"><tbody><tr id="pTR100"><td id="el100" onmouseover="h$(100)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl100" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td100"><td align="left" valign="middle"><img onload="_iniIF(18)" style="display: block;" id="img100" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/notepad.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(100)" href="http://unattended.msfn.org/unattended.xp/changelog/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk100" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Changelog</a></td></tr></tbody></table></td></tr><tr id="pTR101"><td id="el101" onmouseover="h$(101)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl101" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td101"><td align="left" valign="middle"><img onload="_iniIF(18)" style="display: block;" id="img101" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/tool.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(101)" href="http://unattended.msfn.org/unattended.xp/sitemap/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk101" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Sitemap</a></td></tr></tbody></table></td></tr><tr><td height="2"></td></tr><tr><td style="padding: 0px;" id="sep101" align="center"><div style=";background:#8A867A;overflow:hidden;width:95%;;padding:0px;height:1px;font-size:1px;"></div></td></tr><tr><td height="2"></td></tr><tr id="pTR102"><td id="el102" onmouseover="h$(102)" class="sub_menu_off" style="padding: 0px; height: 100%;"><table class="milonictable" style="padding: 0px;" id="MTbl102" height="100%" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="td102"><td align="left" valign="middle"><img onload="_iniIF(18)" style="display: block;" id="img102" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/tool.gif" border="0"></td><td style="" nowrap="nowrap" width="100%"><a name="mM1" onfocus="_iF0C(102)" href="http://unattended.msfn.org/unattended.xp/login/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" class="sub_menu_off" id="lnk102" style="border: medium none; background: none repeat scroll 0% 0% transparent; display: block;">&nbsp;Login</a></td></tr></tbody></table></td></tr></tbody></table> <a target="" title="" name="mM1" id="mmlink18" href="http://unattended.msfn.org/unattended.xp/login/SESSID=5e1c9158972d6cebb05d434ea9ff4793/" onclick="return $K(this._itemRef)" onmouseover="_mot=$P(_mot);return $L(this._itemRef)" style="line-height: normal; background: none repeat scroll 0% 0% transparent; text-decoration: none; height: 18px; width: 92px; overflow: hidden; position: absolute; visibility: hidden; z-index: 1; border: 1px solid rgb(49, 106, 197); top: 49px; left: 4px;"></a></div>
+	<br>
+	<b>Make a donation</b>
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+<input name="cmd" value="_s-xclick" type="hidden">
+
+<input src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/x-click-but04.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!" border="0" type="image">
+
+<img alt="" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/pixel.gif" height="1" border="0" width="1">
+
+<input name="encrypted" value="-----BEGIN PKCS7-----MIIHVwYJKoZIhvcNAQcEoIIHSDCCB0QCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAKoHgKTXolEtszrLvrTq2liTPt9oFRuIKBqR820P+gAJeV7P7oTK0NYIsVcuRh4uka0DOoPFzVKfFx2YE49ZefpfkXg6iwH2umYoy3nBt4WTlblrLiiY1CaaCIC+613D+0hVe3PgN9rCGfoP4tkgsDRat+7c+zcwMm5gkjdUlbrTELMAkGBSsOAwIaBQAwgdQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQI//CuAMRasKCAgbBoTsMDcdibhiI2Uv/YetIFoqLpiodkbRJOH7C0RyYnY1xKbQVkcPjtBOcbskm2latTVugTqSiItRfJqTA9PP9lrZphPALgLDH/86msihejlKC363Gmxm+269a3Nwj3eVSWj3xqp4VmUMPnliRYtkJDV6ulKkX4S1Ffl5kjv3p3xP+ylPFFyDLgOn4L763Kb4m1ZOaAqHkuF5DvApFIjbwBiq8B2ArZw4rxM+LCqn0w9aCCA4cwggODMIIC7KADAgECAgEAMA0GCSqGSIb3DQEBBQUAMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTAeFw0wNDAyMTMxMDEzMTVaFw0zNTAyMTMxMDEzMTVaMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwUdO3fxEzEtcnI7ZKZL412XvZPugoni7i7D7prCe0AtaHTc97CYgm7NsAtJyxNLixmhLV8pyIEaiHXWAh8fPKW+R017+EmXrr9EaquPmsVvTywAAE1PMNOKqo2kl4Gxiz9zZqIajOm1fZGWcGS0f5JQ2kBqNbvbg2/Za+GJ/qwUCAwEAAaOB7jCB6zAdBgNVHQ4EFgQUlp98u8ZvF71ZP1LXChvsENZklGswgbsGA1UdIwSBszCBsIAUlp98u8ZvF71ZP1LXChvsENZklGuhgZSkgZEwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADgYEAgV86VpqAWuXvX6Oro4qJ1tYVIT5DgWpE692Ag422H7yRIr/9j/iKG4Thia/Oflx4TdL+IFJBAyPK9v6zZNZtBgPBynXb048hsP16l2vi0k5Q2JKiPDsEfBhGI+HnxLXEaUWAcVfCsQFvd2A1sxRr67ip5y2wwBelUecP3AjJ+YcxggGaMIIBlgIBATCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwCQYFKw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTA2MTAyMDE5MDY0OFowIwYJKoZIhvcNAQkEMRYEFFAoPOzh/byDKJZ+ILqLZ+IAB1ErMA0GCSqGSIb3DQEBAQUABIGAHXAc2+UDjLDjikXICE1A5zLTkyzFv43rz/YiJf611LmH//+W13BGl4pJ2I+T471cvBOIERgCM0xOsD9U/XdlnKAU/X+v8udNRhteh2ScEc6L24BZ9lxWCO35fj2P1YUBcBrzd36xJulQDeqqA/D0lq73LMj3riDODsYYfCgfdvQ=-----END PKCS7-----
+
+" type="hidden">
+
+</form>
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-2666250944335766";
+/* Unattended Sidebar */
+google_ad_slot = "8184585648";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px"><ins id="aswift_0_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px"><iframe allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){i+='.call';setTimeout(h,0)}else if(h.match){i+='.nav';w.location.replace(h)}s.log&amp;&amp;s.log.push(i)}" vspace="0" id="aswift_0" name="aswift_0" style="left: 0pt; position: absolute; top: 0pt;" frameborder="0" height="600" scrolling="no" width="160"></iframe></ins></ins>
+
+
+
+
+
+<br><br>
+
+
+
+
+
+
+
+
+
+<div style="height:30px;">&nbsp;</div>  
+
+
+
+	<a href="http://validator.w3.org/check?uri=referer"><img style="border: 0pt none; width: 88px; height: 31px;" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/valid-xhtml10.png" alt="Valid XHTML 1.0 Transitional"></a>
+
+
+
+	<a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border: 0pt none; width: 88px; height: 31px;" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/vcss.png" alt="Valid CSS!"></a>
+
+
+
+	<div style="height:30px;">&nbsp;</div>
+
+
+
+
+
+    </td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <td class="main_box">&nbsp;&nbsp;&nbsp;<div align="center">
+  
+  <script type="text/javascript"><!--
+google_ad_client = "pub-2666250944335766";
+/* Unattended Top */
+google_ad_slot = "1444063037";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><iframe allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){i+='.call';setTimeout(h,0)}else if(h.match){i+='.nav';w.location.replace(h)}s.log&amp;&amp;s.log.push(i)}" vspace="0" id="aswift_1" name="aswift_1" style="left: 0pt; position: absolute; top: 0pt;" frameborder="0" height="90" scrolling="no" width="728"></iframe></ins></ins>
+
+<br><br>
+
+</div>
+ 
+
+
+  	
+
+
+
+    <div class="text"> <div class="title"> Unattended Windows Introduction </div>
+<div class="title_subtext"> Submitted by Alanoll </div>
+<br>
+Welcome to Unattended <a style="font-weight: normal; font-size: 100%; text-decoration: none; border-bottom: 0.2em dotted rgb(43, 101, 176); padding-bottom: 0px; color: rgb(43, 101, 176); background-color: transparent;" class="itxtrst itxtrsta itxthook" href="#" id="itxthook0" rel="nofollow"><nobr style="color: rgb(43, 101, 176);" id="itxthook0w0nobr" class="itxtrst itxtrstnobr itxthooknobr"><span id="itxthook0w0" class="itxtrst itxtrstspan itxthookspan" style="background:transparent; font-size:inherit; font-color:inherit;font-weight:inherit;">Windows</span><img class="itxtrst itxtrstimg itxthookicon" id="itxthook0icon" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/mag-glass_10x10.gif" style=""></nobr></a> Guide!<br>
+<br>
+Have you ever wanted a Windows <a style="font-weight: normal; font-size: 100%; text-decoration: none; border-bottom: 0.2em dotted rgb(43, 101, 176); padding-bottom: 0px; color: rgb(43, 101, 176); background-color: transparent;" class="itxtrst itxtrsta itxthook" href="#" id="itxthook1" rel="nofollow"><nobr style="color: rgb(43, 101, 176);" id="itxthook1w0nobr" class="itxtrst itxtrstnobr itxthooknobr"><span id="itxthook1w0" class="itxtrst itxtrstspan itxthookspan" style="background:transparent; font-size:inherit; font-color:inherit;font-weight:inherit;">CD</span><img class="itxtrst itxtrstimg itxthookicon" id="itxthook1icon" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/mag-glass_10x10.gif" style=""></nobr></a>
+ that would install Windows by automatically putting in your name, 
+product key, timezone and regional settings? And have it merged with the
+ latest Service Pack to save time? Followed by silently installing all 
+your favorite applications along with DirectX 9.0c, .Net Framework 1.1 
+and then all the required hotfixes, updated drivers, tweaks, and a 
+readily patched UXTheme without any user interaction whatsoever? Then 
+this guide will show you how you can do just that! <br>
+<br>
+Through the course of this guide, you will create a CD that does all the
+ installing for you. The CD will be fully updated with the latest 
+hotfixes, and install all your programs for you.<br>
+<br>
+This guide has been broken up into three parts: <span style="font-weight: bold;">Beginner</span>, <span style="font-weight: bold;">Intermediate</span>, <span style="font-weight: bold;">Advanced</span>.
+ It has been done so, to help you understand what you\'re doing and not 
+to get over your head too fast. There are pages upon pages of 
+information on this subject, and this guide only covers the tip of the 
+iceberg.<br>
+<br>
+The <span style="font-weight: bold;">Beginner</span> portion will cover the updating of your CD, along with automating setup itself.<br>
+<br>
+The <span style="font-weight: bold;">Intermediate</span> portion covers adding Drivers and Applications to your CD, as well as User creation and other little tidbits.<br>
+<br>
+The <span style="font-weight: bold;">Advanced</span> section is where it
+ gets really fun. We\'ll customize the look and feel of your setup, as 
+well as add hacked files to remove the limits put upon the system.<br>
+<br>
+I must strongly suggest that you adhere to the sections until you feel 
+you have completely mastered them. You don\'t want to go sailing without
+ knowing how to sail. <br>
+<br>
+<span style="font-weight: bold;">Target Audience:</span> Home users - 
+who are taking up a time-consuming process of re-installing Windows, 
+manually installing essential applications, downloading windows updates,
+ and tweaking their OS to perfection on every re-format.<br>
+<br>
+<span style="font-weight: bold;">Difficulty:</span> Requires an 
+intermediate experience of Microsoft Windows and a basic knowledge of 
+how batch commands function. Though batch scripts are briefly covered, 
+it will be a good idea to brush up on your skills before starting. <br>
+<br>
+<div class="section">» Latest Site Updates</div><br>
+<br>
+<span style="font-weight: bold;">15th October 2006</span> - Visitors with Active Scripting disabled are recommended to use sitemap located <a href="http://unattended.msfn.org/unattended.xp/sitemap" target="_blank">here</a>.<br>
+<br>
+<span style="font-weight: bold;">24th December 2005</span> - Another 
+major renovation you say? OF COURSE! New design, new backend management 
+system, AND the ability for normal users to submit additions???? HECK 
+YES!<br>
+<br>
+Enjoy!!<br>
+<br>
+<div class="section">» Translations</div><br>
+These translations are neither supported or maintained by MSFN. We 
+cannot verify the integrity of these translations so please use at your 
+own risk. Requesting help in your native language (with the exception of
+ english) is not permitted on the MSFN forums. You can check this <a href="http://www.msfn.org/board/Unattended-Windows-Translations-t115506.html" target="_blank">forum thread</a> to see if a translation is in progress if its not listed below. Please reply to the thread if you want to make a translation.<br>
+<br>
+<a href="http://www.windows-unattended.de/" target="_blank">German</a> | <a href="http://unattended.oszone.net/" target="_blank">Russian</a> | <a href="http://www.rezet.it/" target="_blank">Italian</a> | <a href="http://www.driverpacks.net/Tutorials/" target="_blank">Dutch</a> | <a href="http://www.cctips.com/Unattended/xp/index.htm" target="_blank">Simplified Chinese</a> | <a href="http://www.silentxp.pl/" target="_blank">Polish</a> | <a href="http://windocs.org/modules.php?name=OtomatikCD" target="_blank">Turkish</a> | <a href="http://webs.ono.com/msfn.1" target="_blank">Spanish</a>
+<hr>
+<div style="text-align: right; font-size: 10px; width:100%;"><div class="print_link"><a href="http://unattended.msfn.org/unattended.xp/print/web/1/SESSID=5e1c9158972d6cebb05d434ea9ff4793/"><img src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/print_friend.gif" alt="Printer Friendly Version"><span style="vertical-align:top;">Printer Friendly Version</span></a></div><div style="text-align:right;"> Last updated 2010-05-08 15:02:40 by Alanoll &nbsp;[<a href="http://unattended.msfn.org/unattended.xp/page/edit/web/1/SESSID=5e1c9158972d6cebb05d434ea9ff4793/">Edit</a>] </div>
+<form method="post" name="move_form" action="/unattended.xp/page/move/SESSID=5e1c9158972d6cebb05d434ea9ff4793/">
+	<input name="old_table" value="web" type="hidden">
+	<input name="id" value="1" type="hidden">
+	<select class="form_boxes" name="new_table">
+		<option selected="selected" value="registry">Move article to Registry Tweak section.</option><option value="switch">Move article to Application Switch section.</option><option value="faq">Move article to FAQ section.</option>
+	</select>
+	<input name="Submit" value="Go" class="form_button" type="submit">
+</form>
+</div> </div>
+
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-2666250944335766";
+/* Unattended Bottom */
+google_ad_slot = "5688027780";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><ins id="aswift_2_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><iframe allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){i+='.call';setTimeout(h,0)}else if(h.match){i+='.nav';w.location.replace(h)}s.log&amp;&amp;s.log.push(i)}" vspace="0" id="aswift_2" name="aswift_2" style="left: 0pt; position: absolute; top: 0pt;" frameborder="0" height="90" scrolling="no" width="728"></iframe></ins></ins>
+<div align="center">
+<div class="text">
+All trademarks mentioned on this page are the property of their respective owners 
+<br>
+MSFN is not affiliated with Microsoft 
+<br>
+Copyright © 2001 - 2011 <a href="http://www.msfn.org/">msfn.org</a>
+<br>
+<a href="http://unattended.msfn.org/privacypolicy.php" target="_blank">Privacy Policy</a>
+
+
+</div>
+
+
+
+</div>
+
+
+
+  </td></tr>
+
+
+
+</tbody></table>
+
+
+
+
+
+
+
+<!-- start Vibrant Media IntelliTXT script section -->
+
+<script type="text/javascript" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/front.js"></script>
+
+<!-- end Vibrant Media IntelliTXT script section -->
+
+
+
+
+
+
+
+
+
+<div style="display: none; visibility: hidden;" id="itxttt" class="itxtrst itxtrstdiv"><div id="itxtshadow" class="itxtrst itxtrstdiv"><div class="itxtrst itxtrstdiv itxtshdw itxttl"><div class="itxtrst itxtrstdiv" style="width: 765px; height: 641px;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/lg_shadow_sprite.png" height="641" width="765"></div></div><div class="itxtrst itxtrstdiv itxtshdw itxtbl"><div class="itxtrst itxtrstdiv" style="width: 765px; height: 641px;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/lg_shadow_sprite.png" height="641" width="765"></div></div><div class="itxtrst itxtrstdiv itxtshdw itxttr"><div class="itxtrst itxtrstdiv" style="width: 765px; height: 641px;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/lg_shadow_sprite.png" height="641" width="765"></div></div><div class="itxtrst itxtrstdiv itxtshdw itxtbr"><div class="itxtrst itxtrstdiv" style="width: 765px; height: 641px;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/lg_shadow_sprite.png" height="641" width="765"></div></div><div class="itxtrst itxtrstdiv itxtshdw itxttm"><div class="itxtrst itxtrstdiv" style="width: 765px; height: 641px;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/lg_shadow_sprite.png" height="641" width="765"></div></div><div class="itxtrst itxtrstdiv itxtshdw itxtbm"><div class="itxtrst itxtrstdiv" style="width: 765px; height: 641px;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/lg_shadow_sprite.png" height="641" width="765"></div></div><div class="itxtrst itxtrstdiv itxtshdw itxtfill"><div class="itxtrst itxtrstdiv" style="width: 765px; height: 641px;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/lg_shadow_sprite.png" height="641" width="765"></div></div><div class="itxtrst itxtrstdiv itxtshdw itxttail"><div class="itxtrst itxtrstdiv" style="width: 765px; height: 641px;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/lg_shadow_sprite.png" height="641" width="765"></div></div></div><div id="itxtchrome" class="itxtrst itxtrstdiv"><div style="background-color: rgb(251, 251, 251);" class="itxtrst itxtrstdiv" backgroundcolor="#fbfbfb" id="itxtcontentbg"></div><div style="position: absolute;" id="itxtslideout" class="itxtrst itxtrstdiv"><div style="width: 100%; height: 100%; background-color: rgb(84, 84, 84); opacity: 0.85; border-radius: 7px 7px 7px 7px;" class="itxtrst itxtrstdiv"></div><div class="itxtrst itxtrstdiv" style="position:absolute;left:0;top:0;width:100%;height:21px;line-height:21px;color:white;font-size:11px;font-weight:bold;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/close_off_002.gif" style="vertical-align: middle; float: right; margin-right: 4px; margin-top: 4px;"><span class="itxtrst itxtrstspan" style="margin-left: 20px;line-height:21px;">${sspl}</span></div><div class="itxtrst itxtrstdiv" style="overflow:hidden;position:absolute;left:20px;top:21px;width:100%;height:NaNpx;width:NaNpx;"></div></div><div id="itxtheader" class="itxtrst itxtrstdiv"><div class="itxtrst itxtrstdiv itxttrc"><a class="itxtrst itxtrsta" target="_blank"><img class="itxtrst itxtrstimg itxtvmlogo" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/vm_logo2009.gif"></a><a class="itxtrst itxtrsta" target="_blank"><img class="itxtrst itxtrstimg itxtwhat" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/what_off.gif" alt="${swti}" title="${swti}"></a><img class="itxtrst itxtrstimg itxtclose" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/close_off.gif" alt="${scls}" title="${scls}"></div><div class="itxtrst itxtrstdiv itxttlc"><div class="itxtrst itxtrstdiv itxtadv">${SSPL}</div></div><div class="itxtrst itxtrstdiv itxtcrnhldr"><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #FDFEFF; margin-left: 6px; margin-right:6px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #F6F6F6; margin-left: 4px; margin-right:4px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #F4F4F4; margin-left: 2px; margin-right:2px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #F1F0F0; margin-left: 2px; margin-right:2px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #EEEDEE; margin-left: 1px; margin-right:1px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #ECECEC; margin-left: 1px; margin-right:1px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #EBEBEA; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #EBEBEB; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #EBEBEB; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #E7E7E6; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #CFCFCF; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #D1D1D2; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #D3D3D3; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #D8D7D5; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #DDDDD9; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #E1E0D9; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #E5E4DB; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #E9E9DC; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #EBEBDC; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #EDECDD; margin-left: 0px; margin-right:0px;"></div><div class="itxtrst itxtrstdiv itxtcrn" style="background-color: #E4E4E4; margin-left: 0px; margin-right:0px;"></div></div></div><div id="itxtfooter" class="itxtrst itxtrstdiv"><div class="itxtrst itxtrstdiv itxtftr" style="background-color: #; margin-left: 1px; margin-right:1px"></div><div class="itxtrst itxtrstdiv itxtftr" style="background-color: f; margin-left: 1px; margin-right:1px"></div><div class="itxtrst itxtrstdiv itxtftr" style="background-color: b; margin-left: 2px; margin-right:2px"></div><div class="itxtrst itxtrstdiv itxtftr" style="background-color: f; margin-left: 2px; margin-right:2px"></div><div class="itxtrst itxtrstdiv itxtftr" style="background-color: b; margin-left: 4px; margin-right:4px"></div><div class="itxtrst itxtrstdiv itxtftr" style="background-color: f; margin-left: 6px; margin-right:6px"></div></div><div style="width: 46px; height: 22px;" id="itxttail" class="itxtrst itxtrstdiv"><div class="itxtrst itxtrstdiv" style="background-color: #; margin-left: 10px; margin-right:2px"></div><div class="itxtrst itxtrstdiv" style="background-color: f; margin-left: 10px; margin-right:4px"></div><div class="itxtrst itxtrstdiv" style="background-color: b; margin-left: 9px; margin-right:6px"></div><div class="itxtrst itxtrstdiv" style="background-color: f; margin-left: 9px; margin-right:8px"></div><div class="itxtrst itxtrstdiv" style="background-color: b; margin-left: 8px; margin-right:10px"></div><div class="itxtrst itxtrstdiv" style="background-color: f; margin-left: 8px; margin-right:12px"></div><div class="itxtrst itxtrstdiv" style="background-color: b; margin-left: 7px; margin-right:14px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 7px; margin-right:16px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 6px; margin-right:18px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 6px; margin-right:20px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 5px; margin-right:22px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 5px; margin-right:24px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 4px; margin-right:26px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 4px; margin-right:28px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 3px; margin-right:30px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 3px; margin-right:32px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 2px; margin-right:34px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 2px; margin-right:36px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 1px; margin-right:38px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 1px; margin-right:40px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 0px; margin-right:42px"></div><div class="itxtrst itxtrstdiv" style="background-color: #ffffff; margin-left: 0px; margin-right:44px"></div></div><div id="itxtdrawerfooter" class="itxtrst itxtrstdiv"></div><div style="overflow: hidden; width: 300px; height: 100px;" id="itxtcontent" class="itxtrst itxtrstdiv"><div class="itxtrst itxtrstdiv" id="itxtcontentLdg" style="position: absolute; display: none; width: 300px; height: 100px;"><img class="itxtrst itxtrstimg" src="MSFN%27s%20Unattended%20Windows%20%20%20Unattended%20Windows%20Introduction_files/loading.gif" id="itxtcontentLdgImg" style="position: absolute; left: 50%; top: 50%; margin-left: 0px; margin-top: 0px;"></div></div></div></div></body></html>
