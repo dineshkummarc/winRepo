@@ -1,33 +1,10 @@
 ﻿import platform
 import os.path
-from xml.dom import minidom
 import tkinter
 import tkinter.ttk
 
-import winPackage
+import winRepo
 
-class repository:
-	
-	def __init__(self,basePath="c:\repo"):
-		self.basePath = basePath
-		self.packages=[]
-	
-	def loadData(self,dataFile="repodata.index"):
-		repodata_xml = os.path.join(self.basePath,dataFile)
-		repodata = minidom.parse(repodata_xml)
-		# print(repodata.toxml(encoding="utf-8"),end="\n")
-		packages=repodata.getElementsByTagName("package")
-
-		for i in range(packages.length):
-			self.packages.append(winPackage.package(os.path.join(self.basePath,packages.item(i).getAttribute("path"),packages.item(i).getAttribute("path")+".winpackage")))
-			# print("Instalando",packages.item(i).getAttribute("name"),sep=" ",end="\n")
-			# pckgs[packages.item(i).getAttribute("name")].install()
-
-	def installPackages(self,packagesList=None):
-		for package in self.packages:
-			if package.name in packagesList:
-				package.install()
-			
 def GUI(repo=None):
 	
 	def beginInstall():
@@ -50,8 +27,6 @@ def GUI(repo=None):
 	
 	arch = platform.architecture()
 	tkinter.ttk.Label(installerWindow_mainframe, text="Programas disponibles ("+arch[1]+" "+arch[0]+")").grid(column=1, row=1, sticky=(tkinter.W, tkinter.E))
-	
-	
 	
 	programsList = tkinter.ttk.Frame(installerWindow_mainframe, padding="3 3 12 12")
 	programsList.grid(column=1, row=2, sticky=(tkinter.N, tkinter.W))
@@ -77,8 +52,8 @@ def GUI(repo=None):
 	installerWindow.bind('<Return>', lambda e: okButton.invoke())
 	installerWindow.mainloop()
 	
-# repo = repository(basePath=os.path.join("..","repo"))
-repo = repository()
+repo = winRepo.repository(basePath=os.path.join("..","repo"))
+# repo = winRepo.repository()
 repo.loadData(dataFile="repodata.xml")
 
 GUI(repo)

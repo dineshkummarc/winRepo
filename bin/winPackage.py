@@ -1,5 +1,9 @@
-﻿import os.path
+﻿import os
+import os.path
 from xml.dom import minidom
+from xml import dom
+import stat
+import shutil
 
 class package:
 	def __init__(self,Path="."):
@@ -26,10 +30,35 @@ class package:
 		subprocess.call(self.installer+installer_params,shell=True)
 	
 	def buildMetadata(self,Data={}):
-		pass
+		sourceMatrix = dom.getDOMImplementation()
+		winpackage_metadata = sourceMatrix.createDocument(None,"winPackage",None)
+		name = winpackage_metadata.createElement("name")
+		name.setAttribute("es",Data["name"])
+		winpackage_metadata.documentElement.appendChild(name)
+		installer = winpackage_metadata.createElement("installer")
+		installer.setAttribute("file",os.path.basename(Data["path"]))
+		winpackage_metadata.documentElement.appendChild(installer)
+		params = Data["params"].split(" ")
+		for param in params:
+			prm = winpackage_metadata.createElement("param")
+			prm.setAttribute("value",param)
+			installer.appendChild(prm)
+		
+		# print(winpackage_metadata.toxml(encoding="utf-8"))
+		return winpackage_metadata.toxml(encoding="utf-8")
 	
 	def build(self,Data={}):
 		# self.path=Path
-		pass
+		md = self.buildMetadata(Data)
+		# print("creating package... TODO",Data)
+		filename = os.path.basename(Data["path"]).rpartition(".")[0]
+		os.makedirs(os.path.join(self.path,filename),exist_ok=True)
+		fileMD = open(os.path.join(self.path,filename,filename+".winpackage"),mode="wb")
+		fileMD.write(md)
+		fileMD.close()
+		shutil.copy(Data["path"],os.path.join(self.path,filename))
+		
+		
+		
 		
 		
