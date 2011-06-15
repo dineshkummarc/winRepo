@@ -4,10 +4,30 @@ from xml.dom import minidom
 from xml import dom
 import stat
 import shutil
+import base64
+import hashlib
+
+import xmlvolume
 
 class package:
-	def __init__(self,Path="."):
-		self.path=Path
+
+	def __init__(self,Name="Unnamed",Version="Unknown",DestinationPath="../xmlfs",SourcePath="."):
+		
+		self.SourceMatrix = dom.getDOMImplementation()
+		self.Document = self.SourceMatrix.createDocument(None,"winPackage",None)
+		
+		self.Name=Name
+		self.NameElement = self.Document.createElement("name")
+		self.NameElement.appendChild(self.Document.createTextNode(self.Name))
+		self.Document.documentElement.appendChild(self.NameElement)
+		
+		self.Version=Version
+		self.Document.documentElement.setAttribute("version",self.Version)
+		
+		self.DestinationPath=DestinationPath
+		self.SourcePath=SourcePath
+		
+		self.FileTree=xmlvolume.xmlvolume(BasePath=self.DestinationPath,Name=Name,Version=Version,Extension=".winpackage",Populate=SourcePath)
 		
 	def load(self):
 		data = minidom.parse(self.path)
@@ -29,7 +49,31 @@ class package:
 		# print(installer_params,end="\n")
 		subprocess.call(self.installer+installer_params,shell=True)
 	
-	def buildMetadata(self,Data={}):
+	# def buildMetadata(self,Data={},flat=True):
+		
+	def define(self,Name="Unnamed",Version="Unknown",FileTree=None):
+		pass
+	
+	def build_legacy(self,Data={},flat=True):
+		# self.path=Path
+		
+		def xmlizeFile():
+			fileelement = winpackage_metadata.createElement("file")
+			fileelement.setAttribute("filename",os.path.basename(Data["path"]))
+			winpackage_metadata.documentElement.appendChild(fileelement)
+			
+			fl = open(Data["path"],"rb")
+			flrd = fl.read()
+			
+			fileelement.setAttribute("md5_hash",hashlib.md5(flrd).hexdigest())
+
+			flrd64 = base64.encodebytes(flrd)
+			flrd64str = flrd64.decode(encoding="utf-8")
+			# print(flrd64str)
+			flrda = winpackage_metadata.createCDATASection(flrd64str)
+			fileelement.appendChild(flrda)
+		
+		# Building package metadata
 		sourceMatrix = dom.getDOMImplementation()
 		winpackage_metadata = sourceMatrix.createDocument(None,"winPackage",None)
 		name = winpackage_metadata.createElement("name")
@@ -44,21 +88,27 @@ class package:
 			prm.setAttribute("value",param)
 			installer.appendChild(prm)
 		
-		# print(winpackage_metadata.toxml(encoding="utf-8"))
-		return winpackage_metadata.toxml(encoding="utf-8")
-	
-	def build(self,Data={}):
-		# self.path=Path
-		md = self.buildMetadata(Data)
-		# print("creating package... TODO",Data)
+		# Append file in metadata if flat
+		if flat:
+			xmlizeFile()
+		
+		# Actually writing the winpackage file
 		filename = os.path.basename(Data["path"]).rpartition(".")[0]
 		os.makedirs(os.path.join(self.path,filename),exist_ok=True)
 		fileMD = open(os.path.join(self.path,filename,filename+".winpackage"),mode="wb")
-		fileMD.write(md)
+		fileMD.write(winpackage_metadata.toxml(encoding="utf-8"))
 		fileMD.close()
-		shutil.copy(Data["path"],os.path.join(self.path,filename))
+		if not flat:
+			shutil.copy(Data["path"],os.path.join(self.path,filename))
 		
-		
+	def build(self,flat=True):
+		# self.Document.documentElement.appendChild(self.FileTree.dumpTree(self.Document))
+		self.FileTree.dump(flat=False)
+		# filename = os.path.basename(self.SourcePath).rpartition(".")[0]
+		# os.makedirs(os.path.join(self.DestinationPath,filename),exist_ok=True)
+		# fileMD = open(os.path.join(self.DestinationPath,filename,filename+".winpackage"),mode="wb")
+		# fileMD.write(self.Document.toxml(encoding="utf-8"))
+		# fileMD.close()
 		
 		
 		

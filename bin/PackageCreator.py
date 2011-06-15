@@ -12,6 +12,7 @@ def GUI():
 		if filename is not "":
 			source_description.set("file name:")
 			source_path.set(os.path.basename(filename))
+			long_name.set(os.path.basename(filename).rpartition(".")[0])
 			packageData['path'] = filename
 
 	def folderSelected():
@@ -22,10 +23,12 @@ def GUI():
 			packageData['path'] = dirname
 
 	def createPackage():
-		package = winPackage.package(Path=os.path.join("..","repo"))
-		packageData["name"] = long_name.get()
-		packageData["params"] = params.get()
-		package.build(packageData)
+		package = winPackage.package(Name=long_name.get(),DestinationPath=os.path.join("..","repo"),SourcePath=packageData['path'])
+		package.build()
+		
+		# packageData["name"] = long_name.get()
+		# packageData["params"] = params.get()
+		# package.build_legacy(packageData)
 
 	def exitProg():
 		managerWindow.destroy()
@@ -33,7 +36,7 @@ def GUI():
 	packageData={}
 		
 	managerWindow = tkinter.Tk()
-	managerWindow.title("winRepo Manager")
+	managerWindow.title("winRepo Package Builder")
 
 	managerWindow_mainframe = tkinter.ttk.Frame(managerWindow, padding="3 3 12 12")
 	managerWindow_mainframe.grid(column=0, row=0, sticky=(tkinter.N, tkinter.W, tkinter.E, tkinter.S))
