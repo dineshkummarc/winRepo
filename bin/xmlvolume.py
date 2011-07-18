@@ -46,7 +46,7 @@ class File(xmlLeaf):
 
 class xmlvolume:		
 	
-	def __init__(self,BasePath=".",Name=None,Version=None,Extension=".XMLVolume",Populate=None):
+	def __init__(self,BasePath=".",Name=None,Version=None,Type="XMLVolume",Populate=None):
 		
 		self.SourceMatrix = dom.getDOMImplementation()
 		self.Document = self.SourceMatrix.createDocument(None,"volume",None)
@@ -63,7 +63,7 @@ class xmlvolume:
 		self.Document.documentElement.setAttribute("version",self.Version)
 		
 		self.BasePath = BasePath
-		self.Extension = Extension
+		self.Type = Type
 		self.Trunk=None
 		
 		if Populate:
@@ -105,7 +105,7 @@ class xmlvolume:
 			self.Trunk.binarySync(os.path.join(self.BasePath,self.Name))
 		self.Document.documentElement.appendChild(self.Trunk.asTreeLeaf(self.Document,flat))
 		os.makedirs(os.path.join(self.BasePath,self.Name),exist_ok=True)
-		fileMD = open(os.path.join(self.BasePath,self.Name,self.Name+self.Extension),mode="wb")
+		fileMD = open(os.path.join(self.BasePath,self.Name,self.Name+"."+self.Type),mode="wb")
 		fileMD.write(self.Document.toxml(encoding="utf-8"))
 		fileMD.close()
 		

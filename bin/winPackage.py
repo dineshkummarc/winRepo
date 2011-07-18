@@ -27,7 +27,7 @@ class package:
 		self.DestinationPath=DestinationPath
 		self.SourcePath=SourcePath
 		
-		self.FileTree=xmlvolume.xmlvolume(BasePath=self.DestinationPath,Name=Name,Version=Version,Extension=".winpackage",Populate=SourcePath)
+		self.FileTree=xmlvolume.xmlvolume(BasePath=self.DestinationPath,Name=Name,Version=Version,Type="winpackage",Populate=SourcePath)
 		
 	def load(self):
 		data = minidom.parse(self.path)

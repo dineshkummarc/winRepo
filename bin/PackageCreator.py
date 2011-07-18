@@ -14,6 +14,31 @@ def GUI():
 			source_path.set(os.path.basename(filename))
 			long_name.set(os.path.basename(filename).rpartition(".")[0])
 			packageData['path'] = filename
+			package = winPackage.package(Name=long_name.get(),DestinationPath=os.path.join("..","repo"),SourcePath=packageData['path'])
+			tree = tkinter.ttk.Treeview(managerWindow_mainframe, columns=('installer', 'parameters', 'size'))
+			tree.grid(column=1, row=5, sticky=(tkinter.S, tkinter.W))
+			
+			tree.column('installer', width=10, anchor='center')
+			tree.column('parameters', width=300, anchor='e')
+			tree.column('size', width=100, anchor='w')
+			
+			tree.heading('installer', text='Installer?')
+			tree.heading('parameters', text='Parameters')
+			tree.heading('size', text='Size')
+			
+			tree.insert('', 'end', text=package.FileTree.Trunk.Name)
+			# Inserted at the root, program chooses id:
+			# tree.insert('', 'end', 'widgets', text='Widget Tour')
+ 
+			# Same thing, but inserted as first child:
+			# tree.insert('', 0, 'gallery', text='Applications')
+
+			# Treeview chooses the id:
+			# id = tree.insert('', 'end', text='Tutorial')
+
+			# Inserted underneath an existing node:
+			# tree.insert('widgets', 'end', text='Canvas')
+			# tree.insert(id, 'end', text='Tree')
 
 	def folderSelected():
 		dirname = tkinter.filedialog.askdirectory()
@@ -34,6 +59,7 @@ def GUI():
 		managerWindow.destroy()
 
 	packageData={}
+	package={}
 		
 	managerWindow = tkinter.Tk()
 	managerWindow.title("winRepo Package Builder")
@@ -65,10 +91,13 @@ def GUI():
 	params_entry = tkinter.ttk.Entry(managerWindow_mainframe, width=25, textvariable=params)
 	params_entry.grid(column=2, row=4, sticky=(tkinter.S, tkinter.W))
 	
+	tree = tkinter.ttk.Treeview(managerWindow_mainframe)
+	tree.grid(column=1, row=5, sticky=(tkinter.S, tkinter.W))
+	
 	okButton = tkinter.ttk.Button(managerWindow_mainframe, text='Create', command=createPackage, default="active")
-	okButton.grid(column=1, row=5, sticky=(tkinter.S, tkinter.W))
+	okButton.grid(column=1, row=6, sticky=(tkinter.S, tkinter.W))
 	cancelButton = tkinter.ttk.Button(managerWindow_mainframe, text='Exit', command=exitProg)
-	cancelButton.grid(column=2, row=5, sticky=(tkinter.S, tkinter.W))
+	cancelButton.grid(column=2, row=6, sticky=(tkinter.S, tkinter.W))
 	
 	managerWindow.bind('<Return>', lambda e: okButton.invoke())
 	managerWindow.mainloop()
