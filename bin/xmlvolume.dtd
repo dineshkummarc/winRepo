@@ -1,0 +1,19 @@
+<!ELEMENT volume (leaf | branch)*>
+<!ATTLIST volume
+	id ID #REQUIRED
+	path CDATA #IMPLIED
+	server CDATA #IMPLIED
+	port CDATA #IMPLIED
+	user CDATA #IMPLIED
+	pass CDATA #IMPLIED
+	dbname CDATA #IMPLIED>
+	
+<!ELEMENT leaf EMPTY>
+<!ATTLIST leaf
+	id ID #REQUIRED
+	path CDATA #IMPLIED>
+
+<!ELEMENT branch (leaf)*>
+<!ATTLIST branch
+	id ID #REQUIRED
+	path CDATA #IMPLIED>

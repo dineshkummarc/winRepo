@@ -6,99 +6,43 @@ from xml import dom
 
 debug=False
 
-class xmlLeaf:
-	def __init__(self,Name,Origin):
-		self.Name=Name
-		self.Origin=Origin
-
-class Directory(xmlLeaf):
-	def __init__(self,Name,Origin):
-		self.Name=Name
-		self.Origin=Origin
-		self.Trunk=[]
-
-	def addChild(self,childLeaf):
-		self.Trunk.append(childLeaf)
+class Tree:		
 	
-	def binarySync(self,destinationParent):
-		pass
-	
-	def asTreeLeaf(self,document,flat=True):
-		self.Element = document.createElement('directory')
-		self.Element.setAttribute("name",self.Name)
-		if debug:
-			self.Element.setAttribute("origin",self.Origin)
-		for leaf in self.Trunk:
-			self.Element.appendChild(leaf.asTreeLeaf(document,flat))
-		return self.Element
-		
-class File(xmlLeaf):
-	
-	def binarySync(self,destinationParent):
-		shutil.copy(self.Origin,destinationParent)
-	
-	def asTreeLeaf(self,document,flat=True):
-		self.Element = document.createElement('file')
-		self.Element.setAttribute("name",self.Name)
-		if debug:
-			self.Element.setAttribute("origin",self.Origin)
-		return self.Element
-
-class xmlvolume:		
-	
-	def __init__(self,BasePath=".",Name=None,Version=None,Type="XMLVolume",Populate=None):
+	def __init__(self,BasePath=".",Name="Unnamed",Version="Unknown",Type="XMLVolume",Mode='database'):
 		
 		self.SourceMatrix = dom.getDOMImplementation()
-		self.Document = self.SourceMatrix.createDocument(None,"volume",None)
+		self.DocType = self.SourceMatrix.createDocumentType('volume','http://localhost/xmlvolume.dtd','xmlvolume.dtd')
+		self.Document = self.SourceMatrix.createDocument("xmlvolume.dtd/volume","volume",self.DocType)
 		
-		if Name:
-			self.Name = Name
-		else:
-			self.Name = "Unnamed"
+		self.Name = Name
 		self.Document.documentElement.setAttribute("name",self.Name)
-		if Version:
-			self.Version = Version
-		else:
-			self.Version = "Unknown"
+		
+		self.Version = Version
 		self.Document.documentElement.setAttribute("version",self.Version)
 		
 		self.BasePath = BasePath
 		self.Type = Type
+		self.Mode = Mode
 		self.Trunk=None
-		
-		if Populate:
-			self.addToTree(Populate)
 	
-	def addToTree(self,SourcePath):
-		
-		def buildLeaf(path, parent):
-			for leaf in os.listdir(path):
-				pathname = os.path.join(path, leaf)
-				mode = os.stat(pathname)[stat.ST_MODE]
-				if stat.S_ISDIR(mode):
-					# It's a directory, recurse into it
-					thisLeaf = Directory(Name=leaf,Origin=pathname)
-					buildLeaf(pathname, thisLeaf)
-				elif stat.S_ISREG(mode):
-					# It's a file, call the callback function
-					thisLeaf = File(Name=leaf,Origin=pathname)
-				else:
-					# Unknown file type, print a message
-					print('Skipping %s' % pathname)
-				parent.addChild(thisLeaf)
-		
-		leafname = os.path.basename(SourcePath)
-		mode = os.stat(SourcePath)[stat.ST_MODE]
-		if stat.S_ISDIR(mode):
-			self.Trunk = Directory(Name=leafname,Origin=SourcePath)
-			buildLeaf(SourcePath, self.Trunk)
-		elif stat.S_ISREG(mode):
-			# It's a file, call the callback function
-			self.Trunk = File(Name=leafname,Origin=SourcePath)
+	def some(self):
+		print('ok')
+	
+	def addLeaf(self,leafID,parent=None):
+		leaf=self.Document.createElement('leaf')
+		leaf.setAttribute('id',leafID)
+		if not parent:
+			self.Document.documentElement.appendChild(leaf)
+	
+	def addBranch(self,branchID,parent=None):
+		branch=self.Document.createElement('branch')
+		branch.setAttribute('id',branchID)
+		if not parent:
+			self.Document.documentElement.appendChild(branch)
 		else:
-			# Unknown file type, print a message
-			print('Skipping %s' % pathname)
-	
+			parentElement=self.Document.getElementById(parent)
+			parentElement.appendChild(branch)
+			
 	def dump(self,flat=True):
 		os.makedirs(os.path.join(self.BasePath,self.Name),exist_ok=True)
 		if not flat:
@@ -108,4 +52,8 @@ class xmlvolume:
 		fileMD = open(os.path.join(self.BasePath,self.Name,self.Name+"."+self.Type),mode="wb")
 		fileMD.write(self.Document.toxml(encoding="utf-8"))
 		fileMD.close()
-		
+
+test = Tree()
+test.addBranch(branchID='test')
+test.addLeaf(leafID='testing',parent='test')
+print(test.Document.toxml(encoding="utf-8"))
